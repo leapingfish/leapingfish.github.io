@@ -1,0 +1,436 @@
+<h2><strong>What is HTML5:</strong></h2>
+<img src="https://www.drupal.org/files/images/html5-logo.jpg" alt="HTMTL5">
+<ul>
+    <li>HyperText Markup Language
+        <ul>
+            <li>A language for displaying content (text, images, table, links, etc..)</li>
+            <li>Provides structure for your site</li>
+            <li>Interpreted by browser based on DOCTYPE <!DOCTYPE html></li>
+        </ul>
+    </li>
+    <li>HTML5 was standardized 2014</li>
+    <li>HTML4 was standardized 1997</li>
+    <li>HTML was invented by Tim Berners-Lee in 1989</li>
+    <ul>
+        <li>Tim Berners-Lee founded and directs World Wide Web Consortium (W3C)</li>
+        <li>The W3C oversees the Web's continued development</li>
+    </ul>
+
+</ul>
+<p>
+    <b>Give me an example teach!</b>
+    <a href='http://codepen.io/hartliddell/pen/XbwXQQ/?editors=100' target="_blank">View example: HTML5 Markup</a>
+</p>
+<br>
+<h5>HTML ELEMENTS</h5>
+<ul>
+    <li>HTML is made up of multiple <b>elements</b> (a.k.a. tags)</li>
+    <li>Most elements have an opening and closing tag.
+        <ul>
+            <li>&lt;b&gt;make it bold&lt;/b&gt;</li>
+            <li><b>make it bold</b></li>
+        </ul>
+    </li>
+    <li>But some elements do not have a closing tag
+        <ul>
+            <li>&lt;img src="http://leapingfish.io/HeyArnold.jpg" alt="Hey Arnold"&gt;</li>
+            <li><img src="http://leapingfish.io/HeyArnold.jpg" alt="Hey Arnold" valign="top"></li>
+        </ul>
+    </li>
+    <li>Basic elements include:
+        <ul>
+            <li>&lt;title&gt;&lt;/title&gt;</li>
+            <li>&lt;h1&gt;&lt;/h1&gt; - heading 1</li>
+            <li>&lt;p&gt;&lt;/p&gt; - paragraph</li>
+            <li>&lt;a&gt;&lt;/a&gt; - link</li>
+            <li>
+            &lt;ul&gt;
+            &lt;li&gt;first list item&lt;/li&gt;
+            &lt;li&gt;second list item&lt;/li&gt;
+            &lt;/ul&gt; - unordered list
+            </li>
+            <li>&lt;div&gt;&lt;/div&gt; - basic container element</li>
+        </ul>
+    </li>
+    <li>Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN documentation of elements</a> for a full list</li>
+</ul>
+<br>
+<h5>HTML ATTRIBUTES</h5>
+<ul>
+    <li>Different elements have <b>attributes</b> that can define characteristics of that element</li>
+    <li>&lt;tag attribute="value"&gt;Content&lt;/tag&gt;</li>
+    <li>Common attributes include:
+        <ul>
+            <li>href</li>
+            <li>style</li>
+            <li>class</li>
+            <li>id</li>
+            <li>src</li>
+        </ul>
+    </li>
+    <li>Quick examples:
+        <ul>
+            <li>&lt;img src="photo.jpg"&gt;</li>
+            <li>&lt;a href="<a href="http://www.google.com">http://www.google.com</a>"&gt;Google&lt;/a&gt;</li>
+            <li>&lt;p class="my-class"&gt;Awesome Class&lt;/p&gt;</li>
+            <li>&lt;h1 style="color: red;"&gt;Intense!&lt;/h1&gt;</li>
+        </ul>
+    </li>
+</ul>
+<br>
+<h5>HTML Named character references</h5>
+<p>Named character references (often casually called entities) are used to print characters that have a special meaning in HTML.</p>
+<ul>
+    <li>&amp;lt; denotes the less-than sign (&lt;)</li>
+    <li>&amp;amp; denotes the ampersand (&amp;)</li>
+    <li>&amp;ldquo; denotes open quote (&ldquo;)</li>
+    <li>&amp;hearts; denotes a heart symbol (&hearts;)</li>
+</ul>
+<br>
+<h5>HTML SKELETON CODE</h5>
+<ul>
+    <li>The absolute basics of every web page.</li>
+    <li><a href="http://codepen.io/hartliddell/pen/gpJMmq?editors=100" target="_blank">View code: HTML Skeleton</a></li>
+</ul>
+<br>
+<h5>LET'S BUILD A PRESS RELEASE!</h5>
+<p>Copy and past <a href="https://gist.github.com/leapingfish/8dde4b3e6a9a95af60be" target="_blank">this code</a> into a new document /8-17-2015/homework/press-release.html.</p>
+<p>Add relevant tags to the content to make it appear like the image below. <br> ~15 min</p>
+<img src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/press-release.png" alt="Press Release" style="width: 900px; height: auto;">
+<br>
+<h5>MORE HTML TAGS / ELEMENTS</h5>
+<table>
+    <tbody>
+        <tr>
+            <td><b>Tag</b></td>
+            <td><b>Description</b></td>
+            <td><b>Require Attr.</b></td>
+        </tr>
+        <tr>
+            <td>&lt;hr&gt;</td>
+            <td>horizontal rule</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&lt;img&gt;</td>
+            <td>image</td>
+            <td>src</td>
+        </tr>
+        <tr>
+            <td>&lt;strong&gt;&lt;/strong&gt;</td>
+            <td>emboldens text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&lt;em&gt;&lt;/em&gt;</td>
+            <td>emphasizes text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&lt;br&gt;</td>
+            <td>forces break line</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h5>HTML NESTING</h5>
+<ul>
+    <li>What is Nesting?
+        <ul>
+            <li>Elements with elements</li>
+            <li>parent &gt; child</li>
+        </ul>
+    </li>
+    <li>look / behavior is inherited to children</li>
+</ul>
+<a href="http://codepen.io/hartliddell/pen/eNadJV?editors=100" target="_blank">http://codepen.io/hartliddell/pen/eNadJV?editors=100</a>
+<br>
+<h5>LISTS</h5>
+<ul>
+    <li>ordered list (numbered): &lt;ol&gt;&lt;/ol&gt;</li>
+    <li>unordered list (bullets): &lt;ul&gt;&lt;/ul&gt;</li>
+    <li>each list has list elements &lt;li&gt;</li>
+</ul>
+<br>
+<h5>TABLES</h5>
+<ul>
+    <li>&lt;table&gt;&lt;/table&gt;</li>
+    <li>rows: &lt;tr&gt;&lt;/tr&gt;</li>
+    <li>columns: &lt;td&gt;&lt;/td&gt;</li>
+    <li>columns go within rows</li>
+</ul>
+<br>
+<h5>COMMENTING</h5>
+<ul>
+    <li>&lt;!&ndash;&ndash; comment &ndash;&ndash;&gt;</li>
+    <li>ignored by the browser</li>
+    <li>helps people (and you) understand your code (BEST PRACTICE)</li>
+</ul>
+<br>
+<h5>LAB TIME: ~25min</h5>
+<li>Open <a href="https://gist.github.com/leapingfish/23d848cd259266d97296" target="_blank">this GIST</a> and add relevant tags to make the recipe appear like the image below.</li>
+<li>Use <a href="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/cookies.jpg" target="_blank">this image</a> as your cookie images asset.</li>
+<li>Save as /08-17-2015/homework/cookie.html</li>
+<li>
+    <div>FINAL PRODUCT:</div> 
+    <img src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/Screen-Shot-2015-08-17-at-1.21.07-PM.png" alt="Cookie Recipe" style="width: 900px; height: auto;">
+</li>
+<br>
+<h2><strong>GETTING TO KNOW THE DOM:</strong></h2>
+<h5>SO WHAT IS THE DOM?</h5>
+The DOM stand for (Document Object Model). It is aqn (API) application programming interface for HTML. Using the DOM programmers can build documents, navigate their structure, and add, modify, or delete elements and content. You have already been using it from the first Class. This <a href="http://css-tricks.com/dom/">article</a> explains the DOM in a fairly concise way.
+<br>
+<h5>OKAY, THAT KINDA MAKES SENSE BUT WHAT DOES IT LOOK LIKE?</h5>
+Great Question!!
+<br>
+<h5>LET'S WALK-THROUGH THIS TOGETHER USING&#8230;CHROME DEV TOOLS</h5>
+<p>Useful for many things like inspecting the DOM, styling on the fly, and debugging. We'll get to all of these later. First the DOM!</p>
+<ul>
+    <li>Open CDT (right click, inspect element)</li>
+</ul>
+<br>
+<h2><strong>CSS BASICS (FINALLY):</strong></h2>
+<h5>WHAT IS CSS???</h5>
+<ol>
+    <li>Cascading Style Sheets
+        <ul>
+            <li>A language for changing the appearance of HTML elements/tags</li>
+            <li>Enables reuse</li>
+        </ul>
+    </li>
+    <li>Aspects of appearance
+        <ul>
+            <li>font, color, padding, margins, backgrounds, layout, borders, gradients</li>
+        </ul>
+    </li>
+</ol>
+<a href="http://codepen.io/hartliddell/pen/OVYgNd?editors=110" target="_blank">http://codepen.io/hartliddell/pen/OVYgNd?editors=110</a>
+<br>
+<h5>LET'S CHECK OUT "SYNTAX"</h5>
+<ul>
+    <li>HTML reference
+        <ul>
+            <li>&lt;tag class="someclassname"&gt;</li>
+        </ul>
+    </li>
+    <li>CSS definition
+        <ul>
+            <li>
+                .someclassname {
+                    property1: value1;
+                    property2: value2;
+                }
+            </li>
+        </ul>
+    </li>
+    <li>Properties: background-color, color, font-family, font-size, font-weight, text-shadow</li>
+    <li>Multiple classes: &lt;tag class="c1 c2 c3″&gt;</li>
+</ul>
+<p><a href="http://codepen.io/hartliddell/pen/OVYgNd?editors=110" target="_blank">Back to our Codepen!</a></p>
+<br>
+<h5>THERE ARE THREE DIFFERENT WAYS TO STYLE YOUR SITE.</h5>
+<ol>
+    <li>Inline Styles</li>
+    <li>Internal Stylesheets</li>
+    <li>External Stylesheets</li>
+</ol>
+<br>
+<h5>INLINE STYLE(&#8230;OH YEAH THOSE STYLE TAGS)</h5>
+<ul>
+    <li>&lt;section class="color: #990000; margin: 20px;"&gt;This is content.&lt;section&gt;</li>
+</ul>
+<br>
+<h5>FIRST! INTERNAL STYLESHEETS</h5>
+<ul>
+    <li>&lt;style&gt; [CSS ME UP] &lt;/style&gt;</li>
+    <li>Usually within &lt;head&gt;&lt;/head&gt; tag</li>
+    <li>Not recommended (not a best practice)</li>
+    <li>But we're going to use it anyway when learning (Great for learning or prototyping)</li>
+</ul>
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td><b>Property</b></td>
+            <td><b>Value</b></td>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>#aabbcc, red</td>
+            <td>font color</td>
+        </tr>
+        <tr>
+            <td>font-size</td>
+            <td>12px, 12pt, 1em</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>font-family</td>
+            <td>arial, helvetica</td>
+            <td>font-type</td>
+        </tr>
+        <tr>
+            <td>font-weight</td>
+            <td>bold,normal</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>background-color</td>
+            <td>#aabbcc, red</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td>1px, 1pt, 1em</td>
+            <td>surrounding space</td>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>1px solid blue</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>margin</td>
+            <td>1px, 1pt, 1em</td>
+            <td>outer space</td>
+        </tr>
+        <tr>
+            <td>text-align</td>
+            <td>left, right, center</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h5>TIME TO GET YOUR STYLE ON!</h5>
+<ol>
+    <li>First head to this link <a href="https://gist.github.com/leapingfish/e98441ce409696e19958">https://gist.github.com/leapingfish/e98441ce409696e19958</a></li>
+    <li>Create new page /8-17-2015/homework/get-your-style-on.html</li>
+    <li>Create the HTML Structure described in the instructions</li>
+    <li>Make a couple of paragraphs in the section</li>
+    <li>Use &lt;style&gt;&lt;/style&gt;in the head area and create a CSS rule for the section</li>
+    <li>Change the font color (COLOR Principles )
+        <ol>
+            <li><a href="http://www.w3schools.com/cssref/css_colors_legal.asp">CSS color Values</a></li>
+        </ol>
+    </li>
+    <li>You've got 20 min.</li>
+</ol>
+<br>
+<h5>EXTERNAL STYLESHEETS</h5>
+<ul>
+    <li>&lt;style&gt;&lt;/style&gt; is not preferred instead use</li>
+    <li>&lt;link rel="stylesheet" href="[url of stylesheet]"&gt;</li>
+    <li>Place in &lt;head&gt;&lt;/head&gt;</li>
+</ul>
+<br>
+<h5>GET THOSE STYLES OUT OF THAT PAGE!</h5>
+<ol>
+    <li>Create another new file: /8-17-2015/homework/get-your-style-on-external.html</li>
+    <li>In that file copy the work from get-your-style-on-external.html</li>
+    <li>Create a new file called main.css and let's move our styles into there</li>
+    <li>Next we going to link the stylesheet to our HTML page</li>
+</ol>
+<br>
+<h5>CSS Selectors:</h5>
+<table>
+    <tbody>
+        <tr>
+            <td><b>CSS Selector</b></td>
+            <td><b>HTML</b></td>
+            <td><b>Scope</b></td>
+        </tr>
+        <tr>
+            <td>Any HTML TAG (ul, p, a)</td>
+            <td>&lt;p&gt;</td>
+            <td>All elements with tag</td>
+        </tr>
+        <tr>
+            <td>.my-class</td>
+            <td>&lt;p class="my-class"&gt;&lt;/p&gt;</td>
+            <td>All element of class</td>
+        </tr>
+        <tr>
+            <td>#my-id</td>
+            <td>&lt;p id="myid"&gt;&lt;/p&gt;</td>
+            <td>Only one element</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h5>SPECIFICITY, INHERITANCE AND YOU:</h5>
+<p>Specificity! It will one of the most important things you'll need understand about CSS and therefore, will be your nemesis! Specificity determines which CSS rule is applied by the browsers.</p>
+<p>There are four distinct categories which define the specificity level of a given selector: inline styles, IDs, classes, and elements. Example Please my good sir: Say you have an unordered list of drinks and you want to put a special style on your favorite.</p>
+<a href="http://codepen.io/hartliddell/pen/OVYRMM?editors=110" target="_blank">http://codepen.io/hartliddell/pen/OVYRMM?editors=110</a>
+<br>
+<p>Great! But I though Specificity would be our nemesis. Seems pretty nice to me.</p>
+<p>Okay how about this: <a href="http://codepen.io/hartliddell/pen/QbRKyp?editors=110" target="_blank">http://codepen.io/hartliddell/pen/QbRKyp?editors=110</a></p>
+<br>
+<h5>WAIT WHY?</h5>
+Order of the most specific to the least specific:
+<ol>
+    <li>&lt;style&gt; (style attribute) - most</li>
+    <li>#id (ids)</li>
+    <li>.class (classes)</li>
+    <li>p (tags/elements) - least</li>
+</ol>
+<br>
+<p>Now inheritance is usually your friend. Let's go back to our list. I'm over blue I want all the text in the unordered list to be purple.</p>
+<a href="http://codepen.io/Adamor/pen/WvRdjM">http://codepen.io/Adamor/pen/WvRdjM</a>
+<br>
+<p>Thanks to Inheritance everything within the list will now be blue&#8230;unless we make it more specific.</p>
+<a href="http://codepen.io/Adamor/pen/eNgyWb">http://codepen.io/Adamor/pen/eNgyWb</a>
+<br>
+<h5>Quick Exercise:</h5>
+<ol>
+    <li>First head to this link <a href="https://gist.github.com/leapingfish/dcf29ef80e7c94dbe3a2" target="_blank">https://gist.github.com/leapingfish/dcf29ef80e7c94dbe3a2</a></li>
+    <li>Create /8-17-2015/homework/inheritance.html</li>
+    <li>Follow the instructions given by adding classes and ids</li>
+    <li>Then in the CSS panel create new styles with those classes and ids</li>
+    <li>Experiment with inheritance and specificity</li>
+</ol>
+<br>
+<h2><strong>WHAT WE LEARNED:</strong></h2>
+<ul>
+    <li>CSS - a way to style HTML</li>
+    <li>Basic syntax properties</li>
+    <li>How to link a stylesheet and page</li>
+    <li>#id, .class, and tag selectors</li>
+    <li>Specificity and Inheritance</li>
+</ul>
+<br>
+<h5>WHY IS CSS IMPORTANT AND AWESOME:</h5>
+<ol>
+    <li>Separates the fine details of appearance (css) with basic display of content (html)</li>
+    <li>Can create a stylesheet
+        <ul>
+            <li>One CSS can set the style for infinity HTML pages</li>
+            <li>single stylesheet sets the "branding" for an entire site</li>
+        </ul>
+    </li>
+    <li>Can "add" CSS properties to create a new style (live example)</li>
+</ol>
+<br>
+<h2><strong>HOMEWORK: ASSIGNMENT</strong></h2>
+<ul>
+    <li>create your (a) resume
+        <ul>
+            <li>find a way to use these tags: &lt;title&gt;&lt;/title&gt;, &lt;h1&gt;&lt;/h1&gt;, &lt;ul&gt;&lt;/ul&gt;, &lt;img&gt;</li>
+            <li>link to your (a) webpage, linkedin, facebook or twitter</li>
+            <li>comment code</li>
+        </ul>
+    </li>
+    <li>put in folder "/08-17-2015/homework/resume.html"</li>
+</ul>
+<p>Give that resume some class!</p>
+<ul>
+    <li>Create an external CSS file</li>
+    <li>Link resume HTML file to CSS file</li>
+    <li>Change the background color of &lt;body&gt; by using the tag selector</li>
+    <li>Change the color of &lt;h1&gt; using a class selector</li>
+    <li>Change the font-size of a &lt;p&gt; using class selector</li>
+    <li>Make sure to experiment!</li>
+</ul>
+<p>Save assignment as /08-17-2015/homework/resume.html so TAs can grade!</p>
