@@ -1,195 +1,209 @@
-<!-- 
-*** AGENDA *** 
-1. Homework Review - Relative file paths - Superman's Resume
-2. Github Review
-3. HTML Review
-4. HTML - Semantic Markup
-5. CSS Review
-6. A better look into the Document Object Module
-7. Draw the DOM(use resume.html or cookie.html)!
-8. CSS Specificity
-9. CSS The Box Model
-10. Assignment - Describe and start assignment if time left in class
--->
-
-<h2>Homework Review!</h2>
-<ul>
-    <li>
-        Any questions?
-        <ul>
-            <li><b>All you need to know about relative file paths</b></li>
-            <li>Starting with "/" returns to the root directory and starts there</li>
-            <li>Starting with "../" moves one directory backwards and starts there</li>
-            <li>Starting with "../../" moves two directories backwards and starts there (and so on...)</li>
-            <li>To move forward, just start with the first subdirectory and keep moving forward</li>
-        </ul>
-    </li>
-    <li>Let's review <a href="http://leapingfish.github.io/" target="_blank">Superman's resumé</a></li>
-</ul>
-<br>
-<h2>GitHub Review</h2>
-<ul>
-    <li>
-        <b>What is GitHub?</b>
-        <ul>
-            <li>It is a platform to manage git repositories</li>
-            <li>Stores a history of each file</li>
-            <li>Allows multiple developers to work on the same project</li>
-        </ul>
-    </li>
-    <li>
-        <b>Important Vocabulary</b>
-        <ul>
-            <li>Git: is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows.</li>
-            <li>Repo: a directory or storage space where your projects can live. </li>
-            <li>Fork: making a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</li>
-            <li>Clone: creating a local copy of a remote repository.</li>
-            <li>Commit: this is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.</li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>HTML5 Basics Review</h2>
-<ul>
-    <li><b>HTML Tags</b>: these are the individual elements that make up the HTML language. Most tags have an opening and closing but some are singular.
-        <ul>
-            <li>&lt;h1&gt;Lorem ipsum&lt;h1/&gt;</li>
-            <li>&lt;p&gt;Lorem ipsum dolor sit amet.&lt;p/&gt;</li>
-            <li>&lt;a&gt;Lorem ipsum&lt;a/&gt;</li>
-            <li>&lt;img&gt;</li>
-        </ul>
-    </li>
-    <li><b>HTML Attributes</b>: is a modifier of an HTML element type.
-        <ul>
-            <li>&lt;h1 class="header"&gt;Lorem ipsum&lt;h1/&gt;</li>
-            <li>&lt;a href="http://www.google.com"&gt;Lorem ipsum&lt;a/&gt;</li>
-            <li>&lt;img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg"&gt;</li>
-        </ul>
-    </li>
-    <li>
-        <b>HTML Comments</b>: are not displayed by the browser, but they can help document your HTML(USE THEM!)
-        <ul>
-            <li>&lt;&ndash;&thinsp;&ndash; this is important! &ndash;&thinsp;&ndash;&gt;</li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>HTML5 Skeleton Review</h2>
-<ul>
-    <li>The absolute basics of any webpage.
-        <ul>
-            <li>
-                <div>&lt;!DOCTYPE html&gt;</div>
-                <div>&lt;html lang="en"&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8" /&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;A title specific to this document&lt;/title&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</div>
-                <br>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</div>
-                <div>&lt;/html&gt;</div>
-            </li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>HTML5 Semantic Markup</h2>
-<ul>
-    <li>&lt;header&gt;&lt;/header&gt;</li>
-    <li>&lt;section&gt;&lt;/section&gt;</li>
-    <li>&lt;aside&gt;&lt;/aside&gt;</li>
-    <li>&lt;nav&gt;&lt;/nav&gt;</li>
-    <li>&lt;address&gt;&lt;/address&gt;</li>
-    
-</ul>
-<img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="HTML5 Semantic Markup">
-<br>
-<h2>CSS3 Basics Review</h2>
-<ul>
-    <li>
-        <b>CSS</b>: is a style sheet language used for describing the look and formatting of a document written in a markup language.
-        <ul>
-            <li><img src="http://learnwebcode.com/wp-content/uploads/2010/02/anatomy-of-a-css-rule.gif" alt="Anatamy of o CSS RUle"></li>
-            <li>Cascading Style Sheets</li>
-            <li>
-                Three ways to add css to our web page.
-                <ul>
-                    <li>Inline: &lt;p style="color: #990000;"&gt;Perferendis facilis animi iste aut vero tempore.&lt;/p&gt;</li>
-                    <li>Internal: &lt;style&gt; p { color: #990000; } &lt;style&gt;</li>
-                    <li>External:
-                        <ul>
-                            <li>&lt;link rel="stylesheet" href="style.css"&gt;</li>
-                            <li>p { color: #990000; }</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>The Document Object Model (THEN more CSS3 and <em>Specificity</em>)</h2>
-<ul>
-    <li>The Dom: is an application programming interface (API) for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</li>
-    <li>What the heck does that mean?
-        <ul>
-            <li>The DOM is a live representation of HTML, as it is affected by outside languages such as Javascript.</li>
-        </ul>
-    </li>
-    <li>Superman Page Dom Example</li>
-    <li>Lab: Draw Your Resume's DOM!</li>
-</ul>
-<br>
-<h2>CSS3 Specificity</h2>
-<ul>
-    <li><b>What the heck is CSS Specificity?</b> (Great Question!)</li>
-    <li>Specificicy refers to the number of conditions applied to a CSS selector.</li>
-    <li><a href="http://codepen.io/hartliddell/pen/EjBYZq?editors=110" target="_blank">Specificity Example</a></li>
-</ul>
-<br>
-<h2>CSS Inheritence</h2>
-<ul>
-    <li><b>Inheritance</b>: is a way of propagating property values from parent elements to their children.</li>
-    <li><a href="http://codepen.io/hartliddell/pen/oXrXgg?editors=010" target="_blank">Inheritence Example</a></li>
-</ul>
-<br>
-<h2>CSS The Box Model</h2>
-<ul>
-    <li>
-        <img src="http://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif" alt="The Box Model Diagram">
-        <p><em>Fed Ex Box Metaphor!</em></p>
-    </li>
-</ul>
-<br>
-<h2>CSS Resets and Normalize</h2>
-<ul>
-    <li>A CSS Reset (or “Reset CSS”) is a short, often compressed (minified) set of CSS rules that resets the styling of all HTML elements to a consistent baseline.</li>
-    <li>
-        Popular resets
-        <ul>
-            <li><a href="http://meyerweb.com/eric/tools/css/reset/reset.css" target="_blank">Eric Meyer's 'Reset CSS' 2.0</a></li>
-            <li><a href="https://html5resetcss.googlecode.com/files/html5reset-1.6.css" target="_blank">HTML5 Doctor CSS Reset</a></li>
-            <li><a href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" target="_blank">Normalize.css</a></li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>Assignment: Build Your First Multipage Website!</h2>
-<ul>
-    <li><b><a href="http://leapingfish.github.io/assignment/get-started.zip" target="_blank">Click here to download assignment</a></b></li>
-    <li><b>Submit to '08-19-2015/homework/portfolio/.'</b></li>
-    <li>Link both pages together using `a` tag</li>
-    <li>Use a unique `title` and a single unique `h1` tag</li>
-    <li>Show images using `img` tags including unique `alt` attributes</li>
-    <li>Use an external CSS stylesheet to style your pages</li>
-    <li>Select at least 5 elements on the page and apply at least 5 different css properties (`font-size`, `color`, `font-family`, `background`, `text-decoration`) to these elements</li>
-    <li>Use at least 6 different HTML tags (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `ul`, `ol`, `a`, `img`) on your pages</li>
-    <li>Follow naming conventions, maintain consistency across your .html and .css files</li>
-    <li>Indent nested elements to increase your code's readability</li>
-</ul>
-<br>
-<h2>More practice: Codecademy!</h2>
-<ul>
-    <li><a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Make a website!</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes: 08-19-2015</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        
+        <!--
+        *** AGENDA ***
+        1. Homework Review - Relative file paths - Superman's Resume
+        2. Github Review
+        3. HTML Review
+        4. HTML - Semantic Markup
+        5. CSS Review
+        6. A better look into the Document Object Module
+        7. Draw the DOM(use resume.html or cookie.html)!
+        8. CSS Specificity
+        9. CSS The Box Model
+        10. Assignment - Describe and start assignment if time left in class
+        -->
+        <div class="notes-content">
+            <h2>Homework Review!</h2>
+            <ul>
+                <li>
+                    Any questions?
+                    <ul>
+                        <li><b>All you need to know about relative file paths</b></li>
+                        <li>Starting with "/" returns to the root directory and starts there</li>
+                        <li>Starting with "../" moves one directory backwards and starts there</li>
+                        <li>Starting with "../../" moves two directories backwards and starts there (and so on...)</li>
+                        <li>To move forward, just start with the first subdirectory and keep moving forward</li>
+                    </ul>
+                </li>
+                <li>Let's review <a href="http://leapingfish.github.io/" target="_blank">Superman's resumé</a></li>
+            </ul>
+            <br>
+            <h2>GitHub Review</h2>
+            <ul>
+                <li>
+                    <b>What is GitHub?</b>
+                    <ul>
+                        <li>It is a platform to manage git repositories</li>
+                        <li>Stores a history of each file</li>
+                        <li>Allows multiple developers to work on the same project</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>Important Vocabulary</b>
+                    <ul>
+                        <li>Git: is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows.</li>
+                        <li>Repo: a directory or storage space where your projects can live. </li>
+                        <li>Fork: making a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</li>
+                        <li>Clone: creating a local copy of a remote repository.</li>
+                        <li>Commit: this is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <h2>HTML5 Basics Review</h2>
+            <ul>
+                <li><b>HTML Tags</b>: these are the individual elements that make up the HTML language. Most tags have an opening and closing but some are singular.
+                    <ul>
+                        <li>&lt;h1&gt;Lorem ipsum&lt;h1/&gt;</li>
+                        <li>&lt;p&gt;Lorem ipsum dolor sit amet.&lt;p/&gt;</li>
+                        <li>&lt;a&gt;Lorem ipsum&lt;a/&gt;</li>
+                        <li>&lt;img&gt;</li>
+                    </ul>
+                </li>
+                <li><b>HTML Attributes</b>: is a modifier of an HTML element type.
+                    <ul>
+                        <li>&lt;h1 class="header"&gt;Lorem ipsum&lt;h1/&gt;</li>
+                        <li>&lt;a href="http://www.google.com"&gt;Lorem ipsum&lt;a/&gt;</li>
+                        <li>&lt;img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg"&gt;</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>HTML Comments</b>: are not displayed by the browser, but they can help document your HTML(USE THEM!)
+                    <ul>
+                        <li>&lt;&ndash;&thinsp;&ndash; this is important! &ndash;&thinsp;&ndash;&gt;</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <h2>HTML5 Skeleton Review</h2>
+            <ul>
+                <li>The absolute basics of any webpage.
+                    <ul>
+                        <li>
+                            <div>&lt;!DOCTYPE html&gt;</div>
+                            <div>&lt;html lang="en"&gt;</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8" /&gt;</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;A title specific to this document&lt;/title&gt;</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</div>
+                            <br>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</div>
+                            <div>&lt;/html&gt;</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <h2>HTML5 Semantic Markup</h2>
+            <ul>
+                <li>&lt;header&gt;&lt;/header&gt;</li>
+                <li>&lt;section&gt;&lt;/section&gt;</li>
+                <li>&lt;aside&gt;&lt;/aside&gt;</li>
+                <li>&lt;nav&gt;&lt;/nav&gt;</li>
+                <li>&lt;address&gt;&lt;/address&gt;</li>
+                
+            </ul>
+            <img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="HTML5 Semantic Markup">
+            <br>
+            <h2>CSS3 Basics Review</h2>
+            <ul>
+                <li>
+                    <b>CSS</b>: is a style sheet language used for describing the look and formatting of a document written in a markup language.
+                    <ul>
+                        <li><img src="http://learnwebcode.com/wp-content/uploads/2010/02/anatomy-of-a-css-rule.gif" alt="Anatamy of o CSS RUle"></li>
+                        <li>Cascading Style Sheets</li>
+                        <li>
+                            Three ways to add css to our web page.
+                            <ul>
+                                <li>Inline: &lt;p style="color: #990000;"&gt;Perferendis facilis animi iste aut vero tempore.&lt;/p&gt;</li>
+                                <li>Internal: &lt;style&gt; p { color: #990000; } &lt;style&gt;</li>
+                                <li>External:
+                                    <ul>
+                                        <li>&lt;link rel="stylesheet" href="style.css"&gt;</li>
+                                        <li>p { color: #990000; }</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <h2>The Document Object Model (THEN more CSS3 and <em>Specificity</em>)</h2>
+            <ul>
+                <li>The Dom: is an application programming interface (API) for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</li>
+                <li>What the heck does that mean?
+                    <ul>
+                        <li>The DOM is a live representation of HTML, as it is affected by outside languages such as Javascript.</li>
+                    </ul>
+                </li>
+                <li>Superman Page Dom Example</li>
+                <li>Lab: Draw Your Resume's DOM!</li>
+            </ul>
+            <br>
+            <h2>CSS3 Specificity</h2>
+            <ul>
+                <li><b>What the heck is CSS Specificity?</b> (Great Question!)</li>
+                <li>Specificicy refers to the number of conditions applied to a CSS selector.</li>
+                <li><a href="http://codepen.io/hartliddell/pen/EjBYZq?editors=110" target="_blank">Specificity Example</a></li>
+            </ul>
+            <br>
+            <h2>CSS Inheritence</h2>
+            <ul>
+                <li><b>Inheritance</b>: is a way of propagating property values from parent elements to their children.</li>
+                <li><a href="http://codepen.io/hartliddell/pen/oXrXgg?editors=010" target="_blank">Inheritence Example</a></li>
+            </ul>
+            <br>
+            <h2>CSS The Box Model</h2>
+            <ul>
+                <li>
+                    <img src="http://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif" alt="The Box Model Diagram">
+                    <p><em>Fed Ex Box Metaphor!</em></p>
+                </li>
+            </ul>
+            <br>
+            <h2>CSS Resets and Normalize</h2>
+            <ul>
+                <li>A CSS Reset (or “Reset CSS”) is a short, often compressed (minified) set of CSS rules that resets the styling of all HTML elements to a consistent baseline.</li>
+                <li>
+                    Popular resets
+                    <ul>
+                        <li><a href="http://meyerweb.com/eric/tools/css/reset/reset.css" target="_blank">Eric Meyer's 'Reset CSS' 2.0</a></li>
+                        <li><a href="https://html5resetcss.googlecode.com/files/html5reset-1.6.css" target="_blank">HTML5 Doctor CSS Reset</a></li>
+                        <li><a href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" target="_blank">Normalize.css</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <h2>Assignment: Build Your First Multipage Website!</h2>
+            <ul>
+                <li><b><a href="http://leapingfish.github.io/assignment/get-started.zip" target="_blank">Click here to download assignment</a></b></li>
+                <li><b>Submit to '08-19-2015/homework/portfolio/.'</b></li>
+                <li>Link both pages together using `a` tag</li>
+                <li>Use a unique `title` and a single unique `h1` tag</li>
+                <li>Show images using `img` tags including unique `alt` attributes</li>
+                <li>Use an external CSS stylesheet to style your pages</li>
+                <li>Select at least 5 elements on the page and apply at least 5 different css properties (`font-size`, `color`, `font-family`, `background`, `text-decoration`) to these elements</li>
+                <li>Use at least 6 different HTML tags (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `ul`, `ol`, `a`, `img`) on your pages</li>
+                <li>Follow naming conventions, maintain consistency across your .html and .css files</li>
+                <li>Indent nested elements to increase your code's readability</li>
+            </ul>
+            <br>
+            <h2>More practice: Codecademy!</h2>
+            <ul>
+                <li><a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Make a website!</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,152 +1,165 @@
-<!--
-*** AGENDA ***
-1. Homework Review (Spaceman Spiff's Dossier of Enemies: leapingfish.github.io/dossier/)
-2. Advanced CSS for images
-3. Pseudo-states
-4. Box Model Review
-5. Box Model Lab (https://gist.github.com/leapingfish/7110aac58ec075d56efe)
-6. Nested Selectors Review
-7. Nested Seloctors Lab (https://gist.github.com/leapingfish/1c0bcb024682dcb67892)
-8. Relaxr Lab (...)
-- How to approach a project
-- ASSIGNMENT: Finish Relaxr lab
-9. Multi-column Layouts
-- History of Layouts on the Web
-- Tables
-- Floats! See it to believe it (http://codepen.io/hartliddell/pen/waVKJY?editors=110)
-- Flexbox
--->
-
-<h2>Homework Review!</h2>
-<ul>
-    <li><b>More organized asset folders!</b>
-        <ul>
-            <li>index.html</li>
-            <li>calvin.html</li>
-            <li>hobbes.html</li>
-            <li>img
-                <ul>
-                    <li>image-one.jpg</li>
-                    <li>image-two.jpg</li>
-                </ul>
-            </li>
-            <li>css
-                <ul>
-                    <li>style.css</li>
-                </ul>
-            </li>
-            <li>js</li>
-        </ul>
-    </li>
-    <li><b>Use a CDN for common library links</b>
-        <ul>
-            <li><b>What is a CDN?</b>
-            <img src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/Screen-Shot-2015-08-24-at-7.04.22-AM.jpg" alt="What is a CDN" style="max-width: 700px;">
-            <li>That's cool but why should I use that here?
-                <ul>
-                    <li>Using a service like CDNJS or Google Libraries saves you the work of hosting the file. Also, there is a chance that the file is already cached on the user's computer if other sites are using the same resource.</li>
-                </ul>
-            </li>
-            </li>
-
-        </ul>
-    </li>
-</ul>
-<br>
-<h2><b>Advanced CSS: Fluid Width Images</b></h2>    
-<ul>
-    <li><b>IMG vs CSS Background Image</b></li>
-    <li><a href="http://codepen.io/hartliddell/pen/QbeGqQ?editors=110" target="_blank">codepen.io/hartliddell/pen/QbeGqQ?editors=110</a></li></li>
-    <li><b>IMG</b>
-        <ul>
-            <li>width vs. max-width</li>
-            <li>height: auto;</li>
-        </ul>
-    </li>
-    <li><b>CSS Background Images</b>
-        <ul>
-            <li>background-image: url('path-to-image.jpg');</li>
-            <li>background-size(cover vs. contain)</li>
-            <li>background-position</li>
-            <li>background-repeat</li>
-        </ul>
-    </li>
-    <li><b>LAB: Fluid Images</b>
-        <ul>
-            <li>create page: /8-24-2015/lab/nature.html
-            <li>create header element with background image that:
-                <ul>
-                    <li>covers element</li>
-                    <li>width 100%</li>
-                    <li>height 700px </li>
-                    <li>https://placeimg.com/1000/1000/nature</li>
-                </ul>
-            </li> 
-            <li>
-                create two html5 sections that: 
-                <ul>
-                    <li>class = forest</li>
-                    <li>max-width 700px</li>
-                    <li>has title(h1) and image</li>
-                    <li>image should be responsive to the width of its container</li>
-                </ul>
-            </li>
-            <li>bonus rounds: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes: 08-24-2015</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        
+        <!--
+        *** AGENDA ***
+        1. Homework Review (Spaceman Spiff's Dossier of Enemies: leapingfish.github.io/dossier/)
+        2. Advanced CSS for images
+        3. Pseudo-states
+        4. Box Model Review
+        5. Box Model Lab (https://gist.github.com/leapingfish/7110aac58ec075d56efe)
+        6. Nested Selectors Review
+        7. Nested Seloctors Lab (https://gist.github.com/leapingfish/1c0bcb024682dcb67892)
+        8. Relaxr Lab (...)
+        - How to approach a project
+        - ASSIGNMENT: Finish Relaxr lab
+        9. Multi-column Layouts
+        - History of Layouts on the Web
+        - Tables
+        - Floats! See it to believe it (http://codepen.io/hartliddell/pen/waVKJY?editors=110)
+        - Flexbox
+        -->
+        <div class="notes-content">
+            <h2>Homework Review!</h2>
             <ul>
-                <li>add footer ul with 5 horizontal items and use a design element to seperate it from the rest of the doc</li>
-                <li>add normalize.css from a CDN</li>
+                <li><b>More organized asset folders!</b>
+                    <ul>
+                        <li>index.html</li>
+                        <li>calvin.html</li>
+                        <li>hobbes.html</li>
+                        <li>img
+                            <ul>
+                                <li>image-one.jpg</li>
+                                <li>image-two.jpg</li>
+                            </ul>
+                        </li>
+                        <li>css
+                            <ul>
+                                <li>style.css</li>
+                            </ul>
+                        </li>
+                        <li>js</li>
+                    </ul>
+                </li>
+                <li><b>Use a CDN for common library links</b>
+                    <ul>
+                        <li><b>What is a CDN?</b>
+                            <img src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/Screen-Shot-2015-08-24-at-7.04.22-AM.jpg" alt="What is a CDN" style="max-width: 700px;">
+                            <li>That's cool but why should I use that here?
+                                <ul>
+                                    <li>Using a service like CDNJS or Google Libraries saves you the work of hosting the file. Also, there is a chance that the file is already cached on the user's computer if other sites are using the same resource.</li>
+                                </ul>
+                            </li>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>Advanced CSS: Pseudo-class</h2>
-<ul>
-    <li>A <b>CSS pseudo-class</b> is a keyword added to selectors that specifies a special state of the element to be selected. For example :hover will apply a style when the user hovers over the element specified by the selector</li>
-    <li>Example: the a tag below has an initial color value of red - on hover, the color turns to green.
-        <ul>
-            <li>a { color: red; }</li>
-            <li>a:hover { color: green; }</li>
-        </ul>
-    </li>
-    <li><b>Common pseudo-classes&hellip;</b>
-        <ul>
-            <li>:active</li>
-            <li>:focus</li>
-            <li>:first-child</li>
-            <li>:last-child</li>
-            <li>:nth-child(n)</li>
-        </ul>
-    </li>
-    <li>More reading: 
-        <ul>
-            <li><a href="https://css-tricks.com/pseudo-class-selectors/" target="_blank">Meet the Pseudo Class Selectors</a></li>
-            <li><a href="https://css-tricks.com/how-nth-child-works/" target="_blank">How Nth Child Works</a></li>
-        </ul>
-    </li>
-</ul>
-<br>
-<h2>Box Model Lab</h2>
-<ul>
-    <li>Save lab at: /[today's date]/lab/box-practice.html</li>
-    <li>LAB: <a href="https://gist.github.com/leapingfish/7110aac58ec075d56efe" target="_blank">https://gist.github.com/leapingfish/7110aac58ec075d56efe</a></li>
-</ul>
-<br>
-<h2>Nested Selectors Test Lab</h2>
-<ul>
-    <li>Save lab at: /[today's date]/lab/nested.html</li>
-    <li><a href="https://color.adobe.com/Batman-Vinyl-color-theme-2528742/" target="_blank">COLORS!</a></li>
-    <li>LAB: <a href="https://gist.github.com/leapingfish/1c82528560a04992f708" target="_blank">https://gist.github.com/leapingfish/1c82528560a04992f708</a></li>
-</ul>
-<br>
-<h2>Relaxr Lab</h2>
-<ul>
-    <li>How to Approach a Project Talk&hellip;</li>
-    <li>Starter files: <a href="http://leapingfish.github.io/relaxr.zip">http://leapingfish.github.io/relaxr.zip</a></li>
-    <li><img style="width: 700px;" src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/relaxr_landing.jpg" alt="Relaxr Lab"></li>
-</ul>
-<br>
-<h2>More practice: Codecademy!</h2>
-<ul>
-    <li><a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Make a website!</a></li>
-</ul>
+            <br>
+            <h2><b>Advanced CSS: Fluid Width Images</b></h2>
+            <ul>
+                <li><b>IMG vs CSS Background Image</b></li>
+                <li><a href="http://codepen.io/hartliddell/pen/QbeGqQ?editors=110" target="_blank">codepen.io/hartliddell/pen/QbeGqQ?editors=110</a></li></li>
+                <li><b>IMG</b>
+                    <ul>
+                        <li>width vs. max-width</li>
+                        <li>height: auto;</li>
+                    </ul>
+                </li>
+                <li><b>CSS Background Images</b>
+                    <ul>
+                        <li>background-image: url('path-to-image.jpg');</li>
+                        <li>background-size(cover vs. contain)</li>
+                        <li>background-position</li>
+                        <li>background-repeat</li>
+                    </ul>
+                </li>
+                <li><b>LAB: Fluid Images</b>
+                    <ul>
+                        <li>create page: /8-24-2015/lab/nature.html
+                            <li>create header element with background image that:
+                                <ul>
+                                    <li>covers element</li>
+                                    <li>width 100%</li>
+                                    <li>height 700px </li>
+                                    <li>https://placeimg.com/1000/1000/nature</li>
+                                </ul>
+                            </li>
+                            <li>
+                                create two html5 sections that:
+                                <ul>
+                                    <li>class = forest</li>
+                                    <li>max-width 700px</li>
+                                    <li>has title(h1) and image</li>
+                                    <li>image should be responsive to the width of its container</li>
+                                </ul>
+                            </li>
+                            <li>bonus rounds:
+                                <ul>
+                                    <li>add footer ul with 5 horizontal items and use a design element to seperate it from the rest of the doc</li>
+                                    <li>add normalize.css from a CDN</li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br>
+                    <h2>Advanced CSS: Pseudo-class</h2>
+                    <ul>
+                        <li>A <b>CSS pseudo-class</b> is a keyword added to selectors that specifies a special state of the element to be selected. For example :hover will apply a style when the user hovers over the element specified by the selector</li>
+                        <li>Example: the a tag below has an initial color value of red - on hover, the color turns to green.
+                            <ul>
+                                <li>a { color: red; }</li>
+                                <li>a:hover { color: green; }</li>
+                            </ul>
+                        </li>
+                        <li><b>Common pseudo-classes&hellip;</b>
+                            <ul>
+                                <li>:active</li>
+                                <li>:focus</li>
+                                <li>:first-child</li>
+                                <li>:last-child</li>
+                                <li>:nth-child(n)</li>
+                            </ul>
+                        </li>
+                        <li>More reading:
+                            <ul>
+                                <li><a href="https://css-tricks.com/pseudo-class-selectors/" target="_blank">Meet the Pseudo Class Selectors</a></li>
+                                <li><a href="https://css-tricks.com/how-nth-child-works/" target="_blank">How Nth Child Works</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br>
+                    <h2>Box Model Lab</h2>
+                    <ul>
+                        <li>Save lab at: /[today's date]/lab/box-practice.html</li>
+                        <li>LAB: <a href="https://gist.github.com/leapingfish/7110aac58ec075d56efe" target="_blank">https://gist.github.com/leapingfish/7110aac58ec075d56efe</a></li>
+                    </ul>
+                    <br>
+                    <h2>Nested Selectors Test Lab</h2>
+                    <ul>
+                        <li>Save lab at: /[today's date]/lab/nested.html</li>
+                        <li><a href="https://color.adobe.com/Batman-Vinyl-color-theme-2528742/" target="_blank">COLORS!</a></li>
+                        <li>LAB: <a href="https://gist.github.com/leapingfish/1c82528560a04992f708" target="_blank">https://gist.github.com/leapingfish/1c82528560a04992f708</a></li>
+                    </ul>
+                    <br>
+                    <h2>Relaxr Lab</h2>
+                    <ul>
+                        <li>How to Approach a Project Talk&hellip;</li>
+                        <li>Starter files: <a href="http://leapingfish.github.io/relaxr.zip">http://leapingfish.github.io/relaxr.zip</a></li>
+                        <li><img style="width: 700px;" src="http://fewd.us/FEWDpress/wp-content/uploads/2015/08/relaxr_landing.jpg" alt="Relaxr Lab"></li>
+                    </ul>
+                    <br>
+                    <h2>More practice: Codecademy!</h2>
+                    <ul>
+                        <li><a href="https://www.codecademy.com/skills/make-a-website" target="_blank">Make a website!</a></li>
+                    </ul>
+                </div>
+            </body>
+        </html>
