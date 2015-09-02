@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layouts: Simple Marketing</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .header,
+            .footer {
+                float: left;
+                height: 160px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                width: 100%;
+            }
+            .primary-one,
+            .primary-two {
+                float: left;
+                margin: 15px 0;
+                width: 50%;
+            }
+            .primary-one .box {
+                height: 460px;
+                margin-right: 15px;
+            }
+            .primary-two .box {
+                height: 460px;
+                margin-left: 15px;
+            }
+            .numbers-container {
+                float: left;
+                margin: 15px 0;
+                width: 100%;
+            }
+            .secondary-one,
+            .secondary-two,
+            .secondary-three {
+                float: left;
+                width: 33.333%;
+            }
+            .secondary-one .box {
+                height: 160px;
+                margin: 0 20px 0 0;
+            }
+            .secondary-two .box {
+                height: 160px;
+                margin: 0 10px 0 10px;
+            }
+            .secondary-three .box {
+                height: 160px;
+                margin: 0 0 0 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Simple Marketing</h1>
+            <header class="box header">
+                HEADER
+            </header>
+            <section class="primary-one">
+                <div class="box">PRIMARY ONE</div>
+            </section>
+            <section class="primary-two">
+                <div class="box">PRIMARY TWO</div>
+            </section>
+            <section class="numbers-container">
+                <section class="secondary-one">
+                    <div class="box">secondary one</div>
+                </section>
+                <section class="secondary-two">
+                    <div class="box">secondary two</div>
+                </section>
+                <section class="secondary-three">
+                    <div class="box">secondary three</div>
+                </section>
+
+            </section>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>

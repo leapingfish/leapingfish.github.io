@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layouts: Magazine</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .logo {
+                float: left;
+                height: 120px;
+                margin: 0 0 15px;
+                width: 25%;
+            }
+            .nav {
+                float: right;
+                margin-top: 25px;
+                text-align: right;
+                width: 70%;
+            }
+            .nav a {
+                color: black;
+                display: inline-block;
+                margin-top: 15px;
+                margin-left: 15px;
+                text-align: center;
+                text-decoration: none;
+                width: 120px;
+            }
+            .sidebar {
+                float: left;
+                width: 22%;
+            }
+            .sidebar .box {
+                height: 668px;
+                margin: 15px 30px 15px 0;
+            }
+            .primary {
+                float: right;
+                margin: 15px 0;
+                width: 78%;
+            }
+            .primary .header {
+                margin-bottom: 15px;
+            }
+            .primary-content {
+                float: left;
+                width: 75%;
+            }
+            .primary-content .box {
+                height: 400px;
+                margin: 15px 15px 15px 0;
+            }
+            .primary-sidebar {
+                float: left;
+                width: 25%;
+            }
+            .primary-sidebar .box {
+                height: 400px;
+                margin: 15px 0 15px 15px;
+            }
+            .numbers-container {
+                float: left;
+                margin: 15px 0;
+                width: 100%;
+            }
+            .secondary-one,
+            .secondary-two,
+            .secondary-three,
+            .secondary-four {
+                float: left;
+                width: 25%;
+            }
+            .secondary-one .box {
+                height: 160px;
+                margin: 0 20px 0 0;
+            }
+            .secondary-two .box {
+                height: 160px;
+                margin: 0 10px;
+            }
+            .secondary-three .box {
+                height: 160px;
+                margin: 0 10px;
+            }
+            .secondary-four .box {
+                height: 160px;
+                margin: 0 0 0 20px;
+            }
+            .footer {
+                height: 160px;
+                margin-bottom: 30px;
+                margin-top: 15px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Magazine</h1>
+            <header class="header">
+                <h1 class="box logo">LOGO</h1>
+                <nav class="nav">
+                    <a class="box" href="#">NAV ONE</a>
+                    <a class="box" href="#">NAV TWO</a>
+                    <a class="box" href="#">NAV THREE</a>
+                    <a class="box" href="#">NAV FOUR</a>
+                    <a class="box" href="#">NAV FIVE</a>
+                </nav>
+            </header>
+            <section class="primary">
+                <header class="box header">
+                    Primary Header
+                </header>
+                <section class="primary-content">
+                    <div class="box">Primary Content</div>
+                </section>
+                <aside class="primary-sidebar">
+                    <div class="box">Primary Sidebar</div>
+                </aside>
+                <section class="numbers-container">
+                    <div class="secondary-one">
+                        <div class="box">secondary one</div>
+                    </div>
+                    <div class="secondary-two">
+                        <div class="box">secondary two</div>
+                    </div>
+                    <div class="secondary-three">
+                        <div class="box">secondary three</div>
+                    </div>
+                    <div class="secondary-four">
+                        <div class="box">secondary four</div>
+                    </div>
+                </section>
+            </section>
+            <aside class="sidebar">
+                <div class="box">SIDEBAR</div>
+            </aside>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>

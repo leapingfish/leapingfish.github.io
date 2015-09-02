@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layouts: Marketing with Nav</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .logo {
+                float: left;
+                height: 120px;
+                width: 20%;
+            }
+            .nav {
+                float: right;
+                margin-top: 40px;
+                text-align: right;
+                width: 70%;
+            }
+            .nav a {
+                color: black;
+                display: inline-block;
+                margin-top: 15px;
+                margin-left: 15px;
+                text-align: center;
+                text-decoration: none;
+                width: 140px;
+            }
+            .primary {
+                float: left;
+                height: 400px;
+                margin: 15px 0;
+                width: 100%;
+            }
+            .numbers-container {
+                float: left;
+                margin: 15px 0;
+                width: 100%;
+            }
+            .secondary-one,
+            .secondary-two,
+            .secondary-three {
+                float: left;
+                width: 33.333%;
+            }
+            .secondary-one .box {
+                height: 160px;
+                margin: 0 20px 0 0;
+            }
+            .secondary-two .box {
+                height: 160px;
+                margin: 0 10px 0 10px;
+            }
+            .secondary-three .box {
+                height: 160px;
+                margin: 0 0 0 20px;
+            }
+            .footer {
+                float: left;
+                height: 160px;
+                margin-bottom: 30px;
+                margin-top: 15px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Marketing with Nav</h1>
+            <header>
+                <h1 class="box logo">LOGO</h1>
+                <nav class="nav">
+                    <a class="box" href="#">NAV ONE</a>
+                    <a class="box" href="#">NAV TWO</a>
+                    <a class="box" href="#">NAV THREE</a>
+                    <a class="box" href="#">NAV Four</a>
+                </nav>
+            </header>
+            <section class="box primary">
+                PRIMARY
+            </section>
+            <section class="numbers-container">
+                <section class="secondary-one">
+                    <div class="box">secondary one</div>
+                </section>
+                <section class="secondary-two">
+                    <div class="box">secondary two</div>
+                </section>
+                <section class="secondary-three">
+                    <div class="box">secondary three</div>
+                </section>
+
+            </section>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>
