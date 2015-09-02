@@ -26,13 +26,9 @@
             }
 
             header,
-            main {
-                margin-bottom: 2em;
-            }
-
-            header {
-                width: 100%;
+            footer {
                 height: 185px;
+                margin: 2em 0;
             }
 
             main {
@@ -40,21 +36,14 @@
                 justify-content: space-between;
             }
 
-            main > section,
+            main > section {
+                height: 500px;
+                width: calc(66.666% - 1em)
+            }
+
             main > aside {
                 height: 500px;
-            }
-
-            main > section {
-                width: 66%;
-            }
-
-            main > aside {
-                width: calc(33% - 2em);
-            }
-
-            footer {
-                height: 185px;
+                width: calc(33.333% - 1em);
             }
         </style>
     </head>
