@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layouts: Two-Column</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                padding: 15px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+            .primary {
+                float: left;
+                width: 66%;
+            }
+            .primary .box {
+                height: 460px;
+                margin-right: 15px;
+            }
+            .secondary {
+                float: left;
+                width: 34%;
+            }
+            .secondary .box {
+                height: 460px;
+                margin-left: 15px;
+            }
+            .header,
+            .footer {
+                float: left;
+                height: 160px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Two-Column</h1>
+            <header class="box header">
+                HEADER
+            </header>
+            <section class="primary">
+                <div class="box">LEFT</div>
+            </section>
+            <aside class="secondary">
+                <div class="box">RIGHT</div>
+            </aside>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>
