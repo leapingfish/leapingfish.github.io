@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layouts: Marketing with Nav</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .header {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                height: 160px;
+                margin: 15px 0;
+            }
+            .header .logo {
+                height: 140px;
+                margin: 0;
+                width: 220px;
+            }
+            .header nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            .header a {
+                color: #000000;
+                display: block;
+                margin-left: 15px;
+                text-decoration: none;
+            }
+            .primary {
+                height: 400px;
+                margin: 15px 0;
+            }
+            .numbers-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .numbers-container > .box {
+                height: 160px;
+                margin: 15px 0;
+                width: calc(33.333% - 15px);
+            }
+            .footer {
+                height: 160px;
+                margin: 15px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Marketing with Nav</h1>
+            <header class="header">
+                <h1 class="box logo">LOGO</h1>
+                <nav class="nav">
+                    <a class="box" href="#">NAV ONE</a>
+                    <a class="box" href="#">NAV TWO</a>
+                    <a class="box" href="#">NAV THREE</a>
+                    <a class="box" href="#">NAV Four</a>
+                </nav>
+            </header>
+            <section class="box primary">
+                PRIMARY
+            </section>
+            <section class="numbers-container">
+                <div class="box secondary-one">secondary one</div>
+                <div class="box secondary-two">secondary two</div>
+                <div class="box secondary-three">secondary three</div>
+            </section>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>

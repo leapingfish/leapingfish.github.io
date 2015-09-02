@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flex Layout: Magazine</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .content-container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin: 15px 0;
+                height: 600px;
+            }
+            .content-container > .primary {
+                width: calc(80% - 15px);
+            }
+            .content-container > .sidebar {
+                width: calc(20% - 15px);
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .header {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+            }
+            .header .logo {
+                height: 120px;
+                width: 180px;
+            }
+            .header a {
+                color: #000000;
+                margin-left: 15px;
+                text-decoration: none;
+            }
+            .footer {
+                margin: 30px 0;
+                height: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Flex Layout: Magazine</h1>
+            <header class="header">
+                <h1 class="box logo">LOGO</h1>
+                <nav class="nav">
+                    <a class="box" href="#">NAV ONE</a>
+                    <a class="box" href="#">NAV TWO</a>
+                    <a class="box" href="#">NAV THREE</a>
+                    <a class="box" href="#">NAV FOUR</a>
+                    <a class="box" href="#">NAV FIVE</a>
+                </nav>
+            </header>
+            <div class="content-container">
+                <section class="primary">
+                    <header class="box header">
+                        Primary Header
+                    </header>
+                    <section class="box primary-content">
+                        Primary Content
+                    </section>
+                    <aside class="box primary-sidebar">
+                        Primary Sidebar
+                    </aside>
+                    <section class="numbers-container">
+                        <div class="box secondary-one">secondary one</div>
+                        <div class="box secondary-two">secondary two</div>
+                        <div class="box secondary-three">secondary three</div>
+                        <div class="box secondary-four">secondary four</div>
+                    </section>
+                </section>
+                <aside class="box sidebar">
+                    SIDEBAR
+                </aside>
+            </div>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>
