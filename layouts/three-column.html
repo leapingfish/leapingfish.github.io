@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Layouts: Two Column</title>
+        <title>Layouts: Three Column</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <style>
             * {
@@ -15,45 +15,56 @@
             .box {
                 background-color: #d8d8d8;
                 border: solid 1px #979797;
+                overflow: hidden;
                 padding: 15px;
-                margin-bottom: 15px;
-                margin-top: 15px;
-            }
-            .primary {
-                float: left;
-                width: 66%;
-            }
-            .primary .box {
-                height: 460px;
-                margin-right: 15px;
-            }
-            .secondary {
-                float: left;
-                width: 34%;
-            }
-            .secondary .box {
-                height: 460px;
-                margin-left: 15px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             .header,
             .footer {
                 float: left;
                 height: 160px;
+                margin-bottom: 15px;
+                margin-top: 15px;
                 width: 100%;
+            }
+            .primary {
+                float: left;
+                width: 64%;
+            }
+            .secondary,
+            .tertiary {
+                float: left;
+                width: 18%;
+            }
+            .primary .box {
+                height: 460px;
+                margin: 15px;
+            }
+            .secondary .box {
+                height: 460px;
+                margin: 15px 15px 15px 0;
+            }
+            .tertiary .box {
+                height: 460px;
+                margin: 15px 0 15px 15px;
             }
         </style>
     </head>
     <body>
         <div class="outer-container">
-            <h1>Two Column</h1>
+            <h1>Three Column</h1>
             <header class="box header">
                 HEADER
             </header>
-            <section class="primary">
-                <div class="box">LEFT</div>
-            </section>
             <aside class="secondary">
-                <div class="box">RIGHT</div>
+                <div class="box">SECONDARY</div>
+            </aside>
+            <section class="primary">
+                <div class="box">PRIMARY</div>
+            </section>
+            <aside class="tertiary">
+                <div class="box">TERTIARY</div>
             </aside>
             <footer class="box footer">
                 FOOTER
