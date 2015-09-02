@@ -17,7 +17,6 @@
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 margin: 15px 0;
-                height: 600px;
             }
             .content-container > .primary {
                 width: calc(80% - 15px);
@@ -49,6 +48,29 @@
                 margin-left: 15px;
                 text-decoration: none;
             }
+            .primary .header {
+                height: 160px;
+            }
+            .primary-content-wrapper {
+                display: flex;
+                justify-content: space-between;
+                margin: 30px 0;
+                height: 300px;
+            }
+            .primary-content {
+                width: calc(80% - 15px);
+            }
+            .primary-sidebar {
+                width: calc(20% - 15px);
+            }
+            .numbers-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .numbers-container > .box {
+                height: 160px;
+                width: calc(25% - 20px);
+            }
             .footer {
                 margin: 30px 0;
                 height: 160px;
@@ -73,12 +95,14 @@
                     <header class="box header">
                         Primary Header
                     </header>
-                    <section class="box primary-content">
-                        Primary Content
+                    <section class="primary-content-wrapper">
+                        <section class="box primary-content">
+                            Primary Content
+                        </section>
+                        <aside class="box primary-sidebar">
+                            Primary Sidebar
+                        </aside>
                     </section>
-                    <aside class="box primary-sidebar">
-                        Primary Sidebar
-                    </aside>
                     <section class="numbers-container">
                         <div class="box secondary-one">secondary one</div>
                         <div class="box secondary-two">secondary two</div>
