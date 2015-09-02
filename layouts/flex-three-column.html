@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flex Layout: Three Column</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                font-size: 13px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                padding: 15px;
+                text-transform: uppercase;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .content-container {
+                display: flex;
+                justify-content: space-between;
+                height: 600px;
+            }
+            .primary {
+                width: calc(60% - 20px);
+            }
+            .secondary,
+            .tertiary {
+                width: calc(20% - 20px);
+            }
+            .header,
+            .footer {
+                height: 160px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Flex Layout: Three Column</h1>
+            <header class="box header">
+                HEADER
+            </header>
+            <div class="content-container">
+                <aside class="box secondary">
+                    Secondary
+                </aside>    
+                <section class="box primary">
+                    Primary
+                </section>
+                <aside class="box tertiary">
+                    Tertiary
+                </aside>                
+            </div>
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>

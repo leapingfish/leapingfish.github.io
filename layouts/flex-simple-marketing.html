@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flex Layout: Simple Marketing</title>
+        <link rel="stylesheet" href="normalize.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .outer-container {
+                margin: auto;
+                max-width: 1060px;
+            }
+            .box {
+                background-color: #d8d8d8;
+                border: solid 1px #979797;
+                overflow: hidden;
+                padding: 15px;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .header,
+            .footer {
+                height: 160px;
+                margin: 15px 0;
+            }
+            .primary-container,
+            .numbers-container {
+                display: flex;
+                justify-content: space-between;
+            } 
+            .primary-container > .box {
+                height: 400px;
+                margin: 15px 0; 
+                width: calc(50% - 15px);
+            }
+            .numbers-container > .box {
+                height: 160px;
+                margin: 15px 0;
+                width: calc(33.333% - 15px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <h1>Simple Marketing</h1>
+            
+            <header class="box header">
+                HEADER
+            </header>
+    
+            <section class="primary-container">
+                <div class="box">PRIMARY ONE</div>
+                <div class="box">PRIMARY TWO</div>
+            </section>        
+            
+            <section class="numbers-container">
+                <div class="box">secondary one</div>
+                <div class="box">secondary two</div>
+                <div class="box">secondary three</div>
+            </section>
+
+            <footer class="box footer">
+                FOOTER
+            </footer>
+        </div>
+    </body>
+</html>
