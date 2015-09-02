@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Flex Layout: Minimal</title>
+
+        <style>
+        
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                max-width: 1060px;
+                margin: auto;
+                padding: 2em 0;
+            }
+
+            header,
+            main > section,
+            main > aside,
+            section,
+            aside,
+            footer {
+                background: #ccc;
+            }
+
+            header,
+            main {
+                margin-bottom: 2em;
+            }
+
+            header {
+                width: 100%;
+                height: 185px;
+            }
+
+            main {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            main > section,
+            main > aside {
+                height: 500px;
+            }
+
+            main > section {
+                width: 66%;
+            }
+
+            main > aside {
+                width: calc(33% - 2em);
+            }
+
+            footer {
+                height: 185px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section></section>
+            <aside></aside>
+        </main>
+        <footer></footer>
+    </body>
+</html>
