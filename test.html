@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>iPhone Width Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .box {
+            background-color: #cecece;
+            color: #999999;
+            height: auto;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        aside.one {
+            width: 300px;
+            background-color: red;
+        }
+
+        aside.two {
+            width: 19em;
+            background-color: red;
+        }
+
+        @media screen and (min-width: 36em) {
+            section {
+                display: flex;
+                justify-content: space-between;
+            }   
+            .box {
+                width: calc(50% - 1em);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquam non hic nemo, placeat tenetur, numquam at soluta voluptates velit porro quisquam tempora earum quae molestiae! Tempora quibusdam deserunt, dolor.</article>
+        <article class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque inventore modi eveniet, nostrum maxime eum vitae nobis quia maiores adipisci, aperiam molestiae? Ab itaque dignissimos officia! Officiis voluptatem ipsam, numquam?</article>
+    </section>
+    hello
+</body>
+</html>
