@@ -20,7 +20,8 @@ body {
 }  
 
 .header {
-  padding-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   align-items: center;
   background-color: #033048;
   display: flex;
@@ -43,6 +44,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   position: fixed;
   top: 0;
   background-color: #f9e42e;
@@ -56,6 +58,7 @@ body {
   font-weight: bold;
   padding-top: 5px;
   padding-bottom: 5px;
+  line-height: 1;
 }
 
 .main {
@@ -119,8 +122,11 @@ body {
   text-decoration: none;
 }
 
-.main__aside__ad {
-  margin: 30px 0;
+.main__aside__adspace {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100px;
+  text-align: center;
 }
 
 .footer-cta {
@@ -166,17 +172,7 @@ body {
   padding: 30px 0;
 }
 
-.adspace {
-  background-color: #ffffff;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-}
-
 @media screen and (min-width: 480px) {
-  .adspace {
-    height: 600px;
-  }
   .main,
   .header {
     flex-direction: row;
@@ -221,6 +217,10 @@ body {
 
   .main__aside ul li a {
     font-size: 24px;
+  }
+
+  .main__aside__adspace {
+    height: 600px;
   }
 }
 
