@@ -48,6 +48,7 @@ body {
   position: fixed;
   top: 0;
   background-color: #f9e42e;
+  box-shadow: 0 0 3px #999;
 }
 
 .header__nav a {
@@ -189,6 +190,7 @@ body {
     background-color: transparent;
     text-align: right;
     position: relative;
+    box-shadow: none;
   }
 
   .header__logo {
