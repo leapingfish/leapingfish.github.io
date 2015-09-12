@@ -9,7 +9,7 @@
     </head>
     <body>
         <section class="notes-content">
-            <h2>Homework Review</h2>
+            <h2>Review Relaxr 2.0</h2>
             <ul>
                 <li><a href="http://leapingfish.github.io/relaxr_2.0" target="_blank">relaxr_2.0</a></li>
                 <li>How to center content with flexbox?</li>
@@ -17,26 +17,66 @@
             </ul>
             <br>
             <h2>Homework Due: Wednesday, September 16</h2>
+            <p><i>This assginment is not mandatory but hight recommended.</i></p>
+
             <ul>
-                <li>Relaxr 3.0 - Mobile friendly!</li>
+                <li>
+                <h3>Relaxr 3.0 - Mobile friendly!</h3>
+                <p>Relaxr loves the new two-column layout but they've noticed a high percent of traffic views the site on a mobile device. They've requested we update the site to a responsive layout that is mobile friendly with a fixed navigation.</p>
+                <div style="height: 0; overflow: hidden; padding-bottom: 100%;">
+                    <a href="../relaxr_3.0/images/comp-desktop.jpg" target="_blank"><img src="../relaxr_3.0/images/comp-desktop.jpg" alt="Desktop Comp" style="width: 65%; display: inline-block; vertical-align: top;"></a>
+                    <a href="../relaxr_3.0/images/comp-mobile.jpg" target="_blank"><img src="../relaxr_3.0/images/comp-mobile.jpg" alt="Mobile Comp" style="width: 30%; display: inline-block; vertical-align: top;"></a>
+                </div>
+                <ul>
+                    <li><h4>HINTS:</h4>
+                    <ol>
+                        <li>To view the site on your iphone, upload the files to your [github name].github.io site we setup during the first class.</li>
+                        <li>
+                            <p>To force the iPhone and other mobile devices to look correct we must add a specific meta tag to the header. This tag is: &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;.</p>
+                            <p>This meta tag is on every responsive site on the web. Read the spec <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag" target="_blank">here</a>.</p>
+                            <p>It looks like this in your DOM.</p> 
+                            <img src="../relaxr_3.0/images/viewport.png" alt="Viewport Meta Tag">
+                        </li>
+                        <li>
+                            <p>Safari Mobile requires vendor prefixes for flexbox. What this means is that along with writing <i>display: flex;</i> you will need to add a bunch of crappy vendor prefixes. Yes they are crappy and the best way to deal with them is CSS prepocessors. However, prepocessors are advanced and we have not gotten there yet. Until we do get there please do not freak out about old browser support. Read more about flex-box vendro prefixes here: <a href="https://css-tricks.com/using-flexbox/" target="_blank">CSS Tricks: Using Flexbox Vendor Prefixes</a>.</p>
+                            <p></p>
+                        </li>
+                    </ol>
+                    </li>
+
+                </ul>
+                </li>
             </ul>
             <br>
             <h2>CSS Display: None vs. Visibility: Hidden vs. Opacity: 0</h2>
             <ul>
-                <li>
+                <li>One at a time, uncomment the .box-two css properties and see how they affect this <a href="http://codepen.io/hartliddell/pen/YyyzMX?editors=010" target="_blank">Codepen example</a>.</li>
+                <li><h3 style="margin: 5px 0 0;">dispay: none</h3>This property essentially removes the item from the page. The space previously occupied by the element will collapse.</li>
+                <li><h3 style="margin: 5px 0 0;">visibility: hidden &amp; opacity: 0;</h3>These properties visually remove the element but the space previously held by the element will stay.</li>                <!-- <li>
                     <a href="https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/" target="_blank">
                         Places It’s Tempting To Use Display: None; But Don’t
                     </a>
-                </li>
+                </li> -->
             </ul>
             <br>
-            <h2>CSS Positioning - Absolute, Relative, Fixed</h2>
+            <h2>CSS Positioning - Static, Absolute, Relative, Fixed</h2>
             <ul>
+                <li>
+                    The <h3 style="display: inline-block; margin: 0;">position</h3> property manipulates the location of an element.
+                </li>
+                <li>CSS Position Values:</li>
+                <ul>
+                    <li><strong>Static</strong>: static is the default value. An element with position: static; is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.</li>
+                    <li><strong>Relative</strong>: relative behaves the same as static unless you add some extra properties. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</li>
+                    <li><strong>Fixed</strong>: A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. As with relative, the top, right, bottom, and left properties are used.</li>
+                    <li><strong>Absolute</strong>: absolute is the trickiest position value. Absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport. If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Remember, a "positioned" element is one whose position is anything except static.</li>
+                </ul>
                 <li>
                     <a href="http://learnlayout.com/position.html" target="_blank">http://learnlayout.com/position.html</a>
                 </li>
-                <li>Related Properties: top, left, right, bottom, z-index</li>
+                <li><strong>Related Properties</strong>: top, left, right, bottom, z-index</li>
             </ul>
+            <!-- 
             <br>
             <h2>CSS Pixels vs. EMs vs. REMs</h2>
             <ul>
@@ -44,15 +84,29 @@
                     <a href="http://snook.ca/archives/html_and_css/font-size-with-rem" target="_blank">Font Size with REMs</a>
                 </li>
             </ul>
+            -->
             <br>
             <h2>CSS Media Queries</h2>
             <ul>
                 <li>Media Queries is a CSS3 module allowing content rendering to adapt to conditions such as screen resolution (e.g. smartphone screen vs. computer screen). It became a W3C recommended standard in June 2012, and is a cornerstone technology of Responsive web design.</li>
+                <li>
+                    <h2>Mobile First Methodology:</h2>
+                    <p>The best way to manage organizing media queries is to approach your code base with a mobile first method.</p>
+                    <p>To accomplish Mobile First, add necessary css to create web page for mobile, <i>then</i> add additional css within min-width media queries.</p>
+                    <p><a href="http://codepen.io/hartliddell/pen/BooyRJ?editors=010" target="_blank">View Codepen Example</a></p>
+                </li>
+                <li>
+                    <h2>Basic Syntax</h2>
+                    <img src="media-query-syntax.jpg" alt="Basic Media Query Syntax">
+                </li>
             </ul>            
             <br>
             <h2>CSS Media Queries Lab: Mobilize Layouts PDF</h2>
             <ul>
                 <li><a href="../layouts/layouts.pdf" target="_blank"><strong>Layouts PDF</strong></a></li>
+                <li><a href="http://codepen.io/hartliddell/pen/BooyRJ?editors=110" target="_blank">Two Column Example</a></li>
+                <li><a href="http://codepen.io/hartliddell/pen/WQvqzj?editors=110" target="_blank">Three Column Example</a></li>
+                <li><a href="http://codepen.io/hartliddell/pen/wKKBpm?editors=010" target="_blank">Magazine with Fixed Nav</a></li>
             </ul>
         </section>
     </body>
