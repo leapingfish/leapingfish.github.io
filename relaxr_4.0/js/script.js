@@ -1,42 +1,48 @@
-/*
- * Attach click events and pass event specific data
- */
+(function() {
 
-$('.main__primary__article__hidden-trigger').on('click', {
-		hiddenElement: '.main__primary__article__hidden',
-		moreText: 'Read More',
-		lessText: 'Read Less'
-	}, addShowToggle);
+	'use strict';
 
-$('.main__aside__hidden-trigger').on('click', {
-		hiddenElement: '.main__aside__hidden',
-		moreText: 'Learn More',
-		lessText: 'Learn Less'
-	}, addShowToggle);
+	/*
+	 * Attach click events and pass event specific data
+	 */
 
-/*
- * Create reusable function
- * to hide and show specific elements on page
- */
+	$('.main__primary__article__hidden-trigger').on('click', {
+			hiddenElement: '.main__primary__article__hidden',
+			moreText: 'Read More',
+			lessText: 'Read Less'
+		}, addShowToggle);
 
-function addShowToggle(event) {
+	$('.main__aside__hidden-trigger').on('click', {
+			hiddenElement: '.main__aside__hidden',
+			moreText: 'Learn More',
+			lessText: 'Learn Less'
+		}, addShowToggle);
 
-	// Prevent default click event
-	event.preventDefault();
+	/*
+	 * Create reusable function
+	 * to hide and show specific elements on page
+	 */
 
-	// SAVE the hidden element as a variable
-	// Prepend $ to variable name to
-	// indicate it is a jquery object
-	var $hiddenElement = $(event.data.hiddenElement);
+	function addShowToggle(event) {
 
-	// Use ternary statement and change
-	// display text based on hidden element's
-	// current css display property
-	$hiddenElement.css('display') === 'none'
-		? $(this).text(event.data.lessText)
-		: $(this).text(event.data.moreText);
+		// Prevent default click event
+		event.preventDefault();
 
-	// Toggle slide hidden element's
-	// display property with jquery animation
-	$hiddenElement.slideToggle();
-}
+		// SAVE the hidden element as a variable
+		// Prepend $ to variable name to
+		// indicate it is a jquery object
+		var $hiddenElement = $(event.data.hiddenElement);
+
+		// Use ternary statement and change
+		// display text based on hidden element's
+		// current css display property
+		$hiddenElement.css('display') === 'none'
+			? $(this).text(event.data.lessText)
+			: $(this).text(event.data.moreText);
+
+		// Toggle slide hidden element's
+		// display property with jquery animation
+		$hiddenElement.slideToggle();
+	}
+
+})();
