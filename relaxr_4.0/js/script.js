@@ -1,6 +1,5 @@
 /*
- * Attach click events to their trigger elements,
- * and pass event specific data
+ * Attach click events and pass event specific data
  */
 
 $('.main__primary__article__hidden-trigger').on('click', {
