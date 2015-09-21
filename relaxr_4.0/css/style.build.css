@@ -1,0 +1,296 @@
+/*
+* Use command line postcss to get ready for the prom.
+* https://github.com/postcss/autoprefixer
+*/
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box; /* IE */
+}
+
+body {
+  background-color: #f0efef;
+  color: #000;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:focus {
+    outline: none;
+}
+
+.main,
+.header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  padding-top: 30px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #033048;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__logo {
+  color: #ffffff;
+  max-width: 100%;
+  font-size: 48px;
+  max-width: 240px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header__nav {
+  max-width: 700px;
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  background-color: #f9e42e;
+  box-shadow: 0 0 3px #999;
+}
+
+.header__nav a {
+  color: #033048;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1;
+}
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.main__primary {
+  max-width: 700px;
+  margin: 10px;
+}
+
+.main__primary__article {
+  border-bottom: solid 1px #999;
+}
+
+.main__primary__article__dropcap {
+  float: left;
+  font-size: 60px;
+  line-height: 0.7;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 0;
+  color: red;
+}
+
+.main__primary__article__title {
+  color: #033048;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.main__primary__article__hidden,
+.main__aside__hidden {
+  display: none;
+}
+
+.main__primary__article__image {
+  width: 100%;
+}
+
+.main__primary__article__hidden-trigger,
+.main__aside__hidden-trigger {
+  font-weight: bold;
+  color: blue;
+  text-decoration: none;
+  color: #033048;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.main__primary__article p {
+  color: #606161;
+  font-weight: 100;
+}
+
+.main__aside {
+  margin: 10px;
+}
+
+.main__aside h2 {
+  color: #043049;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.main__aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main__aside ul li a {
+  color: #043049;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.main__aside__adspace {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-cta {
+  background-color: #f9e42e;
+  margin-top: 50px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-cta a {
+  background: #033048;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 12px 0;
+  text-decoration: none;
+  width: 280px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer h1 {
+  color: #f9e42e;
+  margin-top: 0;
+}
+
+.footer nav a {
+  padding: 15px;
+}
+
+.footer p {
+  font-weight: bold;
+  margin: 0;
+  padding: 30px 0;
+}
+
+@media screen and (min-width: 480px) {
+  .main,
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .main {
+    padding: 5px 0;
+  }
+
+  .header {
+    padding-bottom: 30px;
+  }
+
+  .header__nav {
+    background-color: transparent;
+    text-align: right;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .header__logo {
+    text-align: left;
+  }
+
+  .header__nav a  {
+    color: yellow;
+    font-size: 24px;
+    font-weight: 100;
+    margin: 0 0 0 40px;
+  }
+
+  .main__primary__article__title {
+    font-size: 40px;
+  }
+
+
+  .main__primary__article__footer {
+    text-align: right;
+  }
+
+  .main__aside {
+    max-width: 240px;
+  }
+
+  .main__aside h2 {
+    font-size: 32px;
+  }
+
+  .main__aside ul li a {
+    font-size: 24px;
+  }
+
+  .main__aside__adspace {
+    height: 600px;
+  }
+}
