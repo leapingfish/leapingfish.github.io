@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes: 09-21-2015</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <main class="notes-content">
+            <h2>Homework: Due Wednesday, September 23</h2>
+            <ul>
+                <li>Relaxr 4.0: Relaxr loves the new mobile layout but they want to add more content without ruining the aesthetic.</li>
+                <li>Add content above the Read More and Learn More text. Then add a click event to trigger showing and hiding the new content.</li>
+                <li>
+                    <a class="view-image" href="#">View Image</a>
+                    <a class="hide-image" href="#" style="display: none;">Hide Image</a>
+                    <img src="../relaxr_3.0/images/comp-desktop.jpg" style="display: none;">
+                </li>
+            </ul>
+            <br>
+            <h2>Cont'd: Intro to Programming</h2>
+            <ul>
+                <li>Pseudo-coding FTW!</li>
+                <li>WHY? To organize our thoughts come up with sound logic.</li>
+                <li>
+                    <h3>Building Blocks of Javascript / Important Vocabulary</h3>
+                    <ul>
+                        <li>Statements</li>
+                        <li>Variables</li>
+                        <li>Conditionals</li>
+                        <li>Loops</li>
+                        <li>Functions</li>
+                    </ul>
+                    <h3>Javascript Data Types</h3>
+                    <ul>
+                        <li>Primary (primitive) Data Types - Primitive data types are all data types that are not objects</li>
+                        <li>Boolean = true or false</li>
+                        <li>Undefined = declared but never defined</li>
+                        <li>Null = no value (is an assigned value)</li>
+                        <li>Number = any number</li>
+                        <li>String = a collection of characters, usually wrapped in parenthesis</li>
+                    </ul>
+                    <h3>Javascript Arithmetic Operators</h3>
+                    <ul>
+                        <li>+    Addition</li>
+                        <li>-    Subtraction</li>
+                        <li>*    Multiplication</li>
+                        <li>/    Division</li>
+                        <li>%    Modulus (Remainder)</li>
+                        <li>++    Increment</li>
+                        <li>--    Decrement</li>
+                    </ul>
+                    <h5>PLEASE NOTE: = and == are not the same thing!</h5>
+                    <h3>JavaScript Comparison and Logical Operators</h3>
+                    <ul>
+                        <li>==    equal to</li>
+                        <li>!=    not equal</li>
+                        <li>>    greater than</li>
+                        <li><    less than</li>
+                        <li>>=    greater than or equal to</li>
+                        <li><=    less than or equal to</li>
+                    </ul>
+                    <h3>The Most Important Piece of Javascript (Arguably)</h3>
+                    <ul>
+                        <li>Object - An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. <strong>Pay specific attention to the syntax here - it is the important part!</strong></li>
+                        <li>
+                        var car = {
+                            <div style="padding: 0 20px">wheels: 4,</div>
+                            <div style="padding: 0 20px">driver: 1,</div>
+                            <div style="padding: 0 20px">engine: 1,</div>
+                            <div style="padding: 0 20px">doors: 5,</div>
+                            <div style="padding: 0 20px">radio: 1,</div>
+                            <div style="padding: 0 20px">name: 'The Love Bug'</div>
+                        }</li>
+                        <li>How to get information out of an Object?</li>
+                        <li><strong>Dot notation</strong>: car.name = 'The Love Bug'</li>
+                        <li><strong>Bracket notation</strong>: car['name'] = 'The Love Bug'</li>
+                    </ul>
+                    <br>
+                    <h3>Let's Practice</h3>
+                    <ol>
+                        <li>write a FUNCTION that takes one ARGUMENT that LOGS your name to the CONSOLE</li>
+                        <li>
+                            <div>write a function that takes on argument</div>
+                            <div>make sure argument is string (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank">type of</a>)</div>
+                            <div>else give the user some feedback (<a href="http://www.w3schools.com/jsref/met_win_alert.asp" target="_blank">Window Alert</a>)</div>
+                            <div>return the number of characters in the string (<a href="http://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">JS String Length</a>)</div>
+                            <div>call function 'countChars'</div>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
+            <h2>Introduction to jQuery</h2>
+            <ul>
+                <li>jQuery is a JavaScript framework, which purpose is to make it much easier to use JavaScript on your website. You could also describe jQuery as an abstraction layer, since it takes a lot of the functionality that you would have to write many lines of JavaScript to accomplish and wraps it into functions that you can call with a single line of code. It's important to note that jQuery does not replace JavaScript, and while it does offer some syntactical shortcuts, the code you write when you use jQuery is still JavaScript code.</li>
+                <li><p><strong>jQuery Syntax:</strong> $(tag/selector).method(arguments);</p></li>
+                <li><p>(jQuery JS) var parent = $('#about').parent();</p></li>
+                <li><p>(Vanilla JS) var parent = document.body.getElementById('about').parentNode;</p></li>
+                <li>One way to add jQuery is to add the following tag to the bottom of your page, just before the end body tag: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></li>
+                <li>
+                    <h3>BUT WAIT... why the bottom of the page? Can't I put in the head of my page?</h3>
+                    <p>Javascript needs to be loaded after HTML so that it has access the DOM.</p>
+                    <p>With jQuery we can also use the $(document).ready(); method to achieve this.</p>
+                </li>
+            </ul>
+            <br>
+            <h2>Common jQuery Methods</h2>
+            <ul>
+                <li>.click</li>
+                <li>.slideToggle()</li>
+                <li>.slideUp() </li>
+                <li>.slideDown()</li>
+                <li>.hide()</li>
+                <li>.show()</li>
+                <li>.children()</li>
+                <li>.attr()</li>
+            </ul>
+            <br>
+            <h2>Let's Practice</h2>
+            <li>http://codepen.io/hartliddell/pen/avZYay?editors=101</li>
+            <li>http://codepen.io/hartliddell/pen/rOLdqj?editors=101</li>
+            <li>Add Read More/Read Less links to <a href="../resume/index.html" target="_blank">Clark Kent's Resume</a>.</li>
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            $('.view-image').on('click', function(event) {
+                event.preventDefault();
+                $(this).hide().parent().find('img').show();
+                $('.hide-image').show();
+            });
+            $('.hide-image').on('click', function(event) {
+                event.preventDefault();
+                $(this).hide().parent().find('img').hide();
+                $('.view-image').show();
+            });
+        </script>
+    </body>
+</html>
