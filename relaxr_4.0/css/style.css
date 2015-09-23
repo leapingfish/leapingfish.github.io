@@ -99,7 +99,9 @@ body {
 }
 
 .main__primary__article__cta,
-.main__aside__cta {
+.main__aside__cta,
+.main__primary__article__cta-less,
+.main__aside__cta-less {
   font-weight: bold;
   color: blue;
   text-decoration: none;
