@@ -17,6 +17,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a:focus {
+    outline: none;
+}
+
 .main,
 .header {
   flex-direction: column;
@@ -79,13 +83,14 @@ body {
   border-bottom: solid 1px #999;
 }
 
-.main__primary__article:first-child p:first-letter {
+.main__primary__article__dropcap {
   float: left;
   font-size: 60px;
   line-height: 0.7;
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 0;
+  color: red;
 }
 
 .main__primary__article__title {
@@ -94,12 +99,17 @@ body {
   line-height: 1.25;
 }
 
+.main__primary__article__hidden,
+.main__aside__hidden {
+  display: none;
+}
+
 .main__primary__article__image {
   width: 100%;
 }
 
-.main__primary__article__cta,
-.main__aside__cta {
+.main__primary__article__hidden-trigger,
+.main__aside__hidden-trigger {
   font-weight: bold;
   color: blue;
   text-decoration: none;
@@ -223,6 +233,7 @@ body {
   .main__primary__article__title {
     font-size: 40px;
   }
+
 
   .main__primary__article__footer {
     text-align: right;
