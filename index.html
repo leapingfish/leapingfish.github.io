@@ -19,9 +19,22 @@
             flex-wrap: wrap;
             /*justify-content: space-around;*/
         }
-        .container > * {
-            padding: 0;
-            width: 33%;
+
+        .span-4,
+        .span-8 {
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+            .span-4 {
+                padding: 0;
+                width: 33%;
+            }
+            .span-8 {
+                padding: 0;
+                width: 66%;
+            }
         }
     </style>
 </head>
@@ -31,7 +44,7 @@
     </header>
     <main class="outer-container">
         <div class="container">
-            <ul>
+            <ul class="span-4">
                 <li><h2>Class Notes</h2></li>
                 <li><a href="8-17-2015/index.html">8-17-2015</a></li>
                 <li><a href="8-19-2015/index.html">8-19-2015</a></li>
@@ -44,7 +57,7 @@
                 <li><a href="9-23-2015/index.html">9-23-2015</a></li>
                 <li><a href="9-28-2015/index.html">9-28-2015</a></li>
             </ul>
-            <ul>
+            <ul class="span-4">
                 <li><h2>Assignments</h2></li>
                 <li><a href="layouts/index.html">Layouts</a></li>
                 <li><a href="assignment/index.html">Joe Johnson Portfolio</a></li>
@@ -61,7 +74,7 @@
                 <li><a href="9-28-2015/blackout/index.html">Blackout 1.0</a></li>
                 <li><a href="9-28-2015/blackout/index_v1.1.html">Blackout 1.1</a></li>
             </ul>
-            <ul>
+            <ul class="span-4">
                 <li><h2>Resources</h2></li>
                 <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
                 <li><a href="http://tympanus.net/codrops/" target="_blank">Codrops</a></li>
@@ -71,7 +84,7 @@
                 <li><a href="http://css-weekly.com/" target="_blank">CSS Weekly</a></li>
                 <li><a href="http://javascriptweekly.com/" target="_blank">Javascript Weekly</a></li>
             </ul>
-            <ul style="width: 100%;">
+            <ul class="span-8" style="width: 66%;">
                 <li><h2>Final Project</h2></li>
                 <li><a href="final_project.html">Requirements</a></li>
                 <li><h3>Due Dates</h3></li>
@@ -99,6 +112,10 @@
                         </tr>
                     </table>
                 </li>
+            </ul>
+            <ul class="span-4">
+                <li><h2>Office Hours Signup</h2></li>
+                <li><a href="#">link to google document</a></li>
             </ul>
         </div>
     </main>
