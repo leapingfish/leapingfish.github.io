@@ -28,21 +28,12 @@
 		// Prevent default click event
 		event.preventDefault();
 
-		// SAVE the hidden element as a variable
-		// Prepend $ to variable name to
-		// indicate it is a jquery object
 		var $hiddenElement = $(event.data.hiddenElement);
 
-		// Use ternary statement and change
-		// display text based on hidden element's
-		// current css display property
 		$hiddenElement.css('display') === 'none'
 			? $(this).text(event.data.lessText)
 			: $(this).text(event.data.moreText);
 
-		// Toggle slide hidden element's
-		// display property with jquery animation
 		$hiddenElement.slideToggle();
 	}
-
 })();
