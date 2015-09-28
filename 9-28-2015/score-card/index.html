@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Score Card</title>
+    </head>
+    <body>
+        <button id="zero">RESET</button>
+        <button id="add5">+5</button>
+        <button id="add10">+10</button>
+        <button id="sub1">-1</button>
+        <h1 id="result">0</h1>
+        <script src="../../js/jquery.min.js"></script>
+        <script>
+            // SETUP our total variable
+            // all scorecards start at zero,
+            // so we do to
+            var total = 0;
+
+            // Setup click events for each button
+            $('#zero').on('click', zero);
+            $('#add5').on('click', add5);
+            $('#add10').on('click', add10);
+            $('#sub1').on('click', sub1);
+
+            /*
+             * Setup all our functions to update total
+             * and call #result .html() with new total
+             */
+
+            function zero() {
+              total = 0;
+              $('#result').html(total);
+            }
+
+            function add5() {
+              total = total + 5;
+              $('#result').html(total);
+            }
+
+            function add10() {
+              total = total + 10;
+              $('#result').html(total);
+            }
+
+            function sub1() {
+              total = total - 1;
+              $('#result').html(total);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blackout</title>
+        <style>
+        body.dark {
+            background-color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <button id="light-switch">Light Switch</button>
+        <script src="../../js/jquery.min.js"></script>
+        <script>
+            // CREATE a 'state' and set it to ON
+            var lights = 'on';
+
+            // Add click event to button,
+            // call function onOffSwitch
+            $('#light-switch').on('click', onOffSwitch);
+
+            // CREATE function with logic
+            // to turn on and off the lights
+            function onOffSwitch() {
+                if(lights === 'on') {
+                    $('body').addClass('dark');
+                    lights = 'off';
+                } else {
+                    $('body').removeClass('dark');
+                    lights = 'on';
+                }
+            }
+        </script>
+    </body>
+</html>
