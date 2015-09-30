@@ -3,7 +3,7 @@ $('button').on('click', convertTemperature);
 function convertTemperature(event) {
 
     var tempCelcius = $('#tempCelcius').val();
-    var tempFahrenheit = parseInt(tempCelcius * 1.8 - 64, 10);
+    var tempFahrenheit = parseInt(tempCelcius * 1.8 + 32, 10);
 
     updateHTML(tempFahrenheit);
     updateBackground(tempFahrenheit);
