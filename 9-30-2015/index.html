@@ -6,6 +6,7 @@
         <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="cash-register/css/style.css">
     </head>
     <body>
         <main class="notes-content">
@@ -53,8 +54,27 @@
             <br>
             <h2>Lab: Cash Register</h2>
             <ul>
-                <li></li>
+                <li>
+                    <a href="cash-register-starter.zip">Starter Code</a>
+                </li>
             </ul>
+            <div>
+                <div id="register">
+                    <div id="ticket">
+                        <h1>Thank You!</h1>
+                        <div id="entries"></div>
+                        <div class="footer">
+                            <div>Total</div>
+                            <div id="total">$0.00</div>
+                        </div>
+                    </div>
+                    <form id="entry">
+                        <input id="newEntry" autofocus placeholder="How Much?">
+                    </form>
+                </div>
+            </div>
         </main>
+        <script src='../js/jquery.min.js'></script>
+        <script src="cash-register/js/index.js"></script>
     </body>
 </html>
