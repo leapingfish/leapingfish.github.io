@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+    <div id="register">
+        <div id="ticket">
+            <h1>Thank You!</h1>
+            <div id="entries"></div>
+            <div class="footer">
+                <div>Total</div>
+                <div id="total">$0.00</div>
+            </div>
+        </div>
+        <form id="entry">
+            <input id="newEntry" autofocus placeholder="How Much?">
+        </form>
+    </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script>
+      // A SUPER handy function that makes
+      // our normal values look pretty
+      // when we place them on the page
+      function currencyFormat(number) {
+          var currency = parseFloat(number);
+          currency = currency.toFixed(2);
+          currency = '$' + currency;
+          return currency;
+      }
+
+      // Set the total to start everytime
+      // we refresh the browser
+      var total = 0;
+
+      $('form').on('submit', updateReceipt);
+
+      function updateReceipt(event) {
+
+          // Prevent form from taking it's default
+          // action to submit form
+          event.preventDefault();
+
+          // Save newEntry as a variable to make it more efficient
+          // Prepend it with $ so we know it's a jquery object
+          var $newEntry = $('#newEntry');
+
+          // Save our entry as a variable so we can use it else where
+          var entry = $newEntry.val();
+
+          // Use parseFloat (on both numbers!) to make an floating point number
+          total = parseFloat(total) + parseFloat(entry);
+
+          // Add new nmuber to receipt and use 'currencyFormat' to make it pretty
+          $('#entries').append('<div>' + currencyFormat(entry) + '</div>');
+          $('#total').html(currencyFormat(total));
+
+          // Clear the text input to get ready for our next value
+          $newEntry.val('');
+      }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+
+        // Wrote function called hello,
+        // that returned a nice message with our name
+        function hello(name) {
+            var hi = 'Top of the morning ' + name;
+            console.log(hi);
+            // return hi;
+        }
+
+        // Saved awesome message into a variable
+        var goodmorning = hello('hart');
+
+        // Placed that variable in the DOM
+        $('body').append(goodmorning);
+
+
+
+
+
+        // Create a variable with your favNumOne
+
+        // Write a function that takes that number,
+        // multiplies times two
+        // and saves it in a new variable favNumTwo
+
+        // Global scope
+        var favNumOne = 37;
+
+        function multiply(num) {
+
+            // Local scope
+            favNumTwo = num * 2;
+        }
+
+        multiply(favNumOne);
+
+        // console.log(favNumOne);
+        // console.log(favNumTwo);
+
+
+
+
+
+
+
+        // Global variable
+        var favPizza = 'hawaiian';
+
+        // Function that does stuff
+        function dosomething() {
+
+            // Local variable
+            console.log('dosomething');
+            var otherPizza = 'pepperoni';
+            console.log('inside function ' + otherPizza);
+        }
+
+        // Call our function
+        // dosomething();
+
+        // Consoling values
+        // console.log(favPizza);
+        // console.log(otherPizza);
+    </script>
+</body>
+</html>
