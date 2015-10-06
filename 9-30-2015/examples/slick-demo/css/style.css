@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.hero-slider .slick-slide {
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
+}
+
+.hero-slider .one {
+    background-image: url('../images/fall.jpg');
+}
+
+.hero-slider .two {
+    background-image: url('../images/winter.jpg');
+}
+
+.hero-slider .three {
+    background-image: url('../images/spring.jpg');
+}
+
+.hero-slider .four {
+    background-image: url('../images/summer.jpg');
+}
