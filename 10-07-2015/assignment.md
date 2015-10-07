@@ -7,7 +7,7 @@
 ###Description
 
 
-JavaScript is powerful: we're able to take user interaction and information and use it to update the page without requiring a refresh. This week, a new startup in your city, CitiPix, is looking to create a personalized picture app that allows users to store pictures they've taken around the world and quickly access them by typing in keywords or tags associated with each photo; they have asked for your help to start building the front-end prototype. You will begin by building a web-app that will take a user's input and update the background image of the page based on that input. Once again, you have been given the starter code that includes the HTML and the CSS. Use the images in the [images folder](starter_code/images) and write JavaScript to make the background image reflect user input based on the Technical Requirements  below.
+JavaScript is powerful: we're able to take user interaction and information and use it to update the page without requiring a refresh. This week, a new startup in your city, CitiPix, is looking to create a personalized picture app that allows users to store pictures they've taken around the world and quickly access them by typing in keywords or tags associated with each photo; they have asked for your help to start building the front-end prototype. You will begin by building a web-app that will take a user's input and update the background image of the page based on that input. Once again, you have been given the starter code that includes the HTML and the CSS. Use the images in the [images zip folder](images.zip) and write JavaScript to make the background image reflect user input based on the Technical Requirements  below.
 
 
 <br>
@@ -39,9 +39,7 @@ JavaScript is powerful: we're able to take user interaction and information and 
 - Create ```if / else if / else``` conditionals to control the flow of your application
 - Write at least six different lines of pseudocode and display them inline as JavaScript comments
 - Prevent a form submission using the ```event.preventDefault()``` function
-- Use the ```$.ready()``` handler to delay your code from executing until all DOM assets have been loaded
 - Get the first element from an attribute name using ```$.attr()```
-- Use the ```||``` operator in your conditionals to allow for multiple string values to execute ```if/else if``` statement code
 - If a user submits:
 
   - "New York" or "New York City" or "NYC" make the background of the page nyc.jpg
@@ -53,25 +51,25 @@ JavaScript is powerful: we're able to take user interaction and information and 
 Take a look at what your final product should look like before and after:
 
 
-![Deliverable](solution_code/images/citipix_solution.png)
+![Deliverable](images/citipix_solution.png)
 
 
 After entering "NYC" and submitting:
 
 
-![Deliverable](solution_code/images/citipix_solution_nyc.png)
+![Deliverable](images/citipix_solution_nyc.png)
 
 
 
 ####Bonus
 
-- Remove extra spaces or new lines that users or the browser might add before or after their input
+- Use the ```||``` operator in your conditionals to allow for multiple string values to execute ```if/else if``` statement code
 - Reset the user input field after it is submitted
+- Remove extra spaces or new lines that users or the browser might add before or after their input
 
-
-NOTE: You will have to add these images to your ```/images``` folder
-
-
+#### Extra Big Bonus
+- Replace the text input with a select element.
+- Create an array with the following values: "NYC", "SF", "LA", "ATX", "SYD"; use the array to add values to the &lt;select&gt; menu by using a for loop in JavaScript (don't update the HTML to do this!).
 
 <br>
 
@@ -79,6 +77,7 @@ NOTE: You will have to add these images to your ```/images``` folder
 
 ###Resources
 
-- [Starter Code and Assets](starter_code/)
+- [Starter Code and Assets](starter_code.zip)
 - [JavaScript docs on comparison operators](http://www.w3schools.com/js/js_comparisons.asp)
 - [JavaScript docs on variables](http://www.w3schools.com/js/js_variables.asp)
+- [JavaScript docs on select elements](http://www.w3schools.com/tags/tag_select.asp)
