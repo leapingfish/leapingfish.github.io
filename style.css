@@ -13,13 +13,22 @@ img {
     background-color: #000000;
 }
 
-.global-header h1 {
+.global-header__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: auto;
+}
+
+.global-header h1,
+.global-header h1 a,
+.global-header time {
     color: #ffffff;
     font-size: 21px;
     line-height: 1;
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 10px;
+    margin: 0;
+    padding: 10px 0;
+    text-decoration: none;
 }
 
 .outer-container {
@@ -31,4 +40,35 @@ img {
     margin: auto;
     max-width: 960px;
     padding: 20px;
+}
+
+.home ul {
+    list-style: none;
+}
+.home a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: dashed 1px;
+}
+.home .container {
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-around;*/
+}
+
+.home .span-4,
+.home .span-8 {
+    padding: 0 15px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .home .span-4 {
+        padding: 0;
+        width: 33%;
+    }
+    .home .span-8 {
+        padding: 0;
+        width: 66%;
+    }
 }

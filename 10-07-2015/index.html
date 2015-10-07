@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes: 10-07-2015</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="cash-register/css/style.css">
+    </head>
+    <body>
+        <header class="global-header">
+            <div class="global-header__container">
+                <h1><a href="/">FEWD66</a></h1>
+                <time>October 7, 2015</time>
+            </div>
+        </header>
+        <main class="notes-content">
+            <h2>Review: jQuery Plugins</h2>
+            <ul>
+                <li>
+                    <h3 style="margin-bottom: 0;">Rules of the game:</h3>
+                    <ul>
+                        <li>It's important to pay attention to the order of how things are loaded. jQuery is the biggest dependency so it must come first. Then the plugin library. Then your code that runs the plugin.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 style="margin-bottom: 0;">Plugins to check out:</h3>
+                    <ul>
+                        <li><strong>Slider</strong>: http://kenwheeler.github.io/slick/</li>
+                        <li><strong>Fullpage JS</strong>: https://github.com/alvarotrigo/fullPage.js#fullpagejs</li>
+                        <li><strong>Scroll to Links</strong>: https://github.com/mathiasbynens/jquery-smooth-scrolling</li>
+                        <li><strong>Tooltip</strong>: http://iamceege.github.io/tooltipster/</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 style="margin-bottom: 0;">Other Interesting Libraries</h3>
+                    <ul>
+                        <li><strong>Animate SVGs</strong>: http://maxwellito.github.io/vivus/</li>
+                        <li><strong>Charts</strong>: http://gionkunz.github.io/chartist-js/</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Scroll to Anchor</h2>
+            <ul>
+                <li>Check out the simple <a href="../9-30-2015/examples/scroll-to-links/index.html">Scroll to Link</a> demo</li>
+                <li>
+                    Add scroll to links to <a href="../relaxr_4.1/index.html">the Relaxr</a> page.
+                    <ul>
+                        <li>HINT: you don't want every &lt;a&gt; link to be a jump link. So we are going to need to add specificity to our selector.</li>
+                    </ul>
+                </li>
+                <li><a href="../relaxr_4.1.zip">Download Starter Code</a></li>
+            </ul>
+            <h2>Lab: Weather App</h2>
+            <ul>
+                <li><h3 style="margin: 0;">Create a Temp Converter will take celsius temperature, convert it to Fahrenheit and change the background image according to the weather.</h3></li>
+                <li><a href="../9-28-2015/weather-app/index.html">Example Weather App</a></li>
+                <li>As a class, let's write our feature requirements necessary to create a fully functional application that takes celsius temperature, converts it to Fahrenheit and changes the background to match said temperature.</li>
+                <li>In groups of four write Pseudo-code for the application.</li>
+                <li>In pairs write the code to convert Celsius into Fahrenheit, and display the result in the browser.</li>
+                <li>Once results are being displayed in the browser, add the background changing functionality.</li>
+            </ul>
+        </main>
+        <script src='../js/jquery.min.js'></script>
+    </body>
+</html>
