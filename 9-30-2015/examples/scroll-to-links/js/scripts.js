@@ -1,6 +1,6 @@
-$('a').on('click', jump);
+$('a').on('click', smoothScrollJump);
 
-function jump(event) {
+function smoothScrollJump(event) {
     event.preventDefault();
 
     // GET THE LINK WE CLICKED ON
@@ -8,6 +8,8 @@ function jump(event) {
 
     // GOT THE NAME OF THE ID SPECIFIC TO THE TARGET
     var targetId = $currentTarget.attr('href');
+
+    console.log($(targetId).offset());
 
     // MEASURE DISTANCE FROM ID TO TOP OF DOCUMENT
     var offsetTop = $(targetId).offset().top;
