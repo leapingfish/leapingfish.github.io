@@ -17,8 +17,91 @@
         </header>
         <main class="notes-content">
             <h2>Homework Review!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus officia a sequi amet consequuntur aperiam nulla consectetur fugiat obcaecati ipsam, eveniet excepturi, corporis nesciunt at modi neque odit. Odit, vero.</p>
+            <ul>
+                <li><a href="../10-07-2015/weather/index.html">Weather App</a></li>
+                <li>Why are functions important for this app?</li>
+                <li>Why is it important our conditional statement is in a function? (hint: these questions are very related)</li>
+                <li>
+                    Interested ideas/vocabulary to take from this?
+                    <ul>
+                        <li>Document Control of Flow</li>
+                        <li>Javascript is Single Threaded Language</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <!-- <h2>CitiPix</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, laborum placeat dolorem ipsa reprehenderit. Ea facere ipsam, optio beatae quia saepe dolorum facilis, similique natus at praesentium alias dignissimos quod.</p>
+            <br> -->
+            <h2>FORMS!</h2>
+            <h3 style="margin-bottom: 0;">What is a Form?</h3>
+            <p>A webform, web form or HTML form on a web page allows a user to enter data that is sent to a server for processing. Forms can resemble paper or database forms because web users fill out the forms using checkboxes, radio buttons, or text fields.</p>
+            <form>
+                <div><input type="text" id="entry.1877148304" name="entry.1877148304" placeholder="First Name"/></div>
+                <div><input type="text" name="entry.23615261" placeholder="Last Name"/></div>
+                <div><input type="text" name="entry.1964514289" placeholder="name@domain.com"/></div>
+                <div><button type="submit">Submit</button></div>
+            </form>
+            <ul>
+                <li><h3 style="margin-bottom: 0;">Important Form Tags</h3></li>
+                <li>
+                    &lt;form&gt;&lt;/form&gt;
+                    <ul>
+                        <li><h4 style="margin: 0;">attributes</h4></li>
+                        <li>action="file_to_process_our_form.php"</li>
+                        <li>method="get"</li>
+                        <li>method="post"</li>
+                    </ul>
+                </li>
+                <li>
+                    &lt;input&gt;&lt;/input&gt;
+                    <ul>
+                        <li><h4 style="margin: 0;">A form input's most import attributes are name, value and type.</h4></li>
+                        <li>name: this is usually how we identify data to be passed</li>
+                        <li>value: specifies the value of an &lt;input&gt; element</li>
+                        <li>
+                            <h4>Type: Indicate what type of input we want. See a small list of input 'types' below.</h4>
+                            <ul>
+                                <li>type="text"</li>
+                                <li>type="number"</li>
+                                <li>type="radio"</li>
+                                <li>type="checkbox"</li>
+                                <li>type="submit"</li>
+                                <li><a href="http://www.w3schools.com/html/html_form_input_types.asp" target="_blank">Learn more</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>&lt;select&gt;&lt;/select&gt;</li>
+                <li><a href="http://www.w3schools.com/html/exercise.asp?filename=exercise_forms1" target="_blank">Click here to practice.</a></li>
+                <li>Are there any out of the box form solutions? (http://www.wufoo.com)</li>
+            </ul>
+            <h2>Lab: Build Our Own Google Document Form</h2>
+            <p><a href="form--google/index.html" target="_blank">The Most Simple Form in the World</a></p>
         </main>
         <script src='../js/jquery.min.js'></script>
+        <script>
+            $('form').on('submit', function(event) {
+
+                // Prevent form submission
+                event.preventDefault();
+
+                // Get the form instance
+                var $form = $(event.currentTarget);
+
+                // Use Ajax to submit form data
+                var url = 'https://docs.google.com/forms/d/1nqgexVCLWp8jpzOO4JSAjtou-PD2UIaX0pMfYalsunI/formResponse';
+
+                var data = $form.serialize();
+
+                $.post(url, $form.serialize(), function() {
+
+                }).always(function() {
+                    console.warn('Data sent to Google.');
+                    $form.find('input').val('');
+                    $form.after('<div class="thankyou">Thank you</div>');
+                });
+            });
+        </script>
     </body>
 </html>
