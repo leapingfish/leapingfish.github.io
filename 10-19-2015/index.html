@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Notes: 10-19-2015</title>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="cash-register/css/style.css">
+    </head>
+    <body>
+        <header class="global-header">
+            <div class="global-header__container">
+                <h1><a href="/">FEWD66</a></h1>
+                <time>October 19, 2015</time>
+            </div>
+        </header>
+        <main class="notes-content">
+            <h2>More Forms..</h2>
+            <ul>
+                <li><a href="google-doc-form.html">Simple Google Doc Form</a></li>
+                <li><a href="validate/index.html">jQuery Validate and UI</a></li>
+            </ul>
+            <br>
+            <h2>Final Project Work &amp; QA</h2>
+        </main>
+        <script src='../js/jquery.min.js'></script>
+        <script>
+            $('form').on('submit', function(event) {
+
+                // Prevent form submission
+                event.preventDefault();
+
+                // Get the form instance
+                var $form = $(event.currentTarget);
+
+                // Use Ajax to submit form data
+                var url = 'https://docs.google.com/forms/d/1nqgexVCLWp8jpzOO4JSAjtou-PD2UIaX0pMfYalsunI/formResponse';
+
+                var data = $form.serialize();
+
+                $.post(url, $form.serialize(), function() {
+
+                }).always(function() {
+                    console.warn('Data sent to Google.');
+                    $form.find('input').val('');
+                    $form.after('<div class="thankyou">Thank you</div>');
+                });
+            });
+        </script>
+    </body>
+</html>

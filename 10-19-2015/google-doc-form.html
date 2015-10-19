@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submit Doc</title>
+</head>
+<body>
+
+    <h1>Google Doc Form</h1>
+
+    <form>
+        <input type="hidden" name="formkey" value="1C185zfhO2pSLXkCur_b3TZStuiGYqHcDH4mlj1vgIFE">
+        <input type="text" class="form-name" placeholder="Name" name="entry.1713976707">
+        <input type="text" class="form-email" placeholder="Email" name="entry.312683418">
+        <input type="text" class="form-place" placeholder="Where are you from?" name="entry.23147427">
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <a href="https://docs.google.com/spreadsheets/d/1yIV2WQS9iweJscO_KjZHIV1jfldY_9K9JlqkFqouE-U/edit?usp=sharing" target="_blank">View Responses</a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+
+        // Event handler
+        $('form').on('submit', function(event) {
+
+            // Prevent form submission
+            event.preventDefault();
+
+            // Get the form instance
+            var $form = $(event.currentTarget);
+
+            // Saving the value of this form field
+            var formName = $('.form-name').val();
+            var formPlace = $('.form-place').val();
+            var formEmail = $('.form-email').val();
+
+            // Checking that the specific form field is not empyt
+            if(formName === '' || formEmail === '' || formPlace === '') {
+                alert('Please fill out the form!');
+            } else {
+                submitForm($form);
+            }
+        });
+
+        function submitForm($form) {
+
+            // Use Ajax to submit form data
+            var url = 'https://docs.google.com/forms/d/1C185zfhO2pSLXkCur_b3TZStuiGYqHcDH4mlj1vgIFE/formResponse?entry.1713976707=noplacelikehome';
+            // var url = 'https://docs.google.com/forms/d/18LD6ueL10_lLVAKpDgfmLpUBlzoRFEZSoMod57MXfH0/formResponse?entry.1000000=';
+            // var data = $form.serialize();
+            var jqxhr = $.post(url, $form.serialize(), function() {
+                console.log('success');
+            }).done(function() {
+                console.log('second success');
+            }).fail(function() {
+                console.log('error');
+            }).always(function(data) {
+                console.log('Data sent to Google.');
+                console.log(data);
+            });
+        }
+    </script>
+
+</body>
+</html>
