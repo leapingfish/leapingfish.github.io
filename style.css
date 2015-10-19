@@ -23,6 +23,7 @@ img {
 .global-header h1,
 .global-header h1 a,
 .global-header time {
+    border: none;
     color: #ffffff;
     font-size: 21px;
     line-height: 1;
