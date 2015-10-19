@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Post to Google Sheet Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+</head>
+<body>
+
+<form>
+
+    <div>
+        <label for="entry.1877148304">First Name</label>
+        <input type="text" id="entry.1877148304" name="entry.1877148304" placeholder="First Name"/>
+    </div>
+
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="entry.23615261" placeholder="Last Name"/>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" name="entry.1964514289" placeholder="name@domain.com"/>
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $('form').on('submit', function(event) {
+
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the form instance
+        var $form = $(event.currentTarget);
+
+        console.log($form.find('input').val());
+
+        // This is the fancy stuff
+        // Use Ajax to submit form data
+        // ----------------------
+        // var url = 'https://docs.google.com/forms/d/1nqgexVCLWp8jpzOO4JSAjtou-PD2UIaX0pMfYalsunI/formResponse';
+        //
+        // var data = $form.serialize();
+        //
+        // $.post(url, $form.serialize(), function() {
+        //
+        // }).always(function() {
+        //     console.warn('Data sent to Google.');
+        //     $('body').append('<div>Than you for submitting a form!</div>');
+        // });
+    });
+</script>
+</body>
+</html>
