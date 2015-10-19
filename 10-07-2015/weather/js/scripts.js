@@ -38,4 +38,17 @@ function convertTemp(num) {
 function updateHtmlTemp(num) {
     $('.tempFahrenheit').html(num);
     $('input').val('');
+
+    var $body = $('body');
+
+    console.log(num);
+    if (num > 90) {
+        $body.css('background-image', 'url("../images/austin.jpg")');
+    } else if (num <= 90 && num > 80) {
+        $body.css('background-image', 'url("../images/la.jpg")');
+    } else if (num <= 80 && num > 70) {
+        $body.css('background-image', 'url("../images/sf.jpg")');
+    } else {
+        $body.css('background-image', 'url("../images/nyc.jpg")');
+    }
 }
