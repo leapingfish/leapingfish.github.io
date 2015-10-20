@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-item > * {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-item {
+    margin: 10px 0;
+    width: 100%;
+}
+
+form label.error {
+    color: red;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: auto;
+    }
+    .form-item {
+        width: calc(50% - 10px);
+    }
+    .form-item.form-item--fullwidth {
+        width: 100%;
+    }
+    .form-item.form-item--halfwidth {
+        width: calc(25% - 10px);
+    }
+}
