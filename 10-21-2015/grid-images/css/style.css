@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+}
+ul img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.popup {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 999999;
+  background: white;
+  padding: 10px;
+}
+.popup h3 {
+  margin-bottom: 5px;
+}
+.popup a {
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}

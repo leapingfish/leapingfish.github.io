@@ -1,0 +1,1 @@
+$("li[data-title]").on("click",function(){if($(this).find(".popup").length>0)$(this).find(".popup").remove();else{$(".popup").remove();var t=$(this).data("title"),p='<div class="popup">';p+="<h3>"+t+"</h3>",p+='<a href="http://www.google.com" target="_blank">MORE</a>',p+="</div>",$(this).append(p)}});
