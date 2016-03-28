@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form PDF</title>
+    <style media="screen">
+        html {
+            font-size: 14px;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: auto;
+            width: 840px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        header {
+            margin: 0 0 12px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            background-color: #cecece;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .contact-info__name,
+        .contact-info__title {
+            font-weight: bold;
+        }
+
+        .flexbox {
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 0;
+        }
+
+        .flexbox > img {
+            width: calc(33% - 8px);
+        }
+
+        .flexbox .contact-info {
+            width: calc(33% - 12px);
+        }
+
+        .flexbox .about {
+            column-count: 2;
+            -webkit-column-count: 2;
+            width: calc(66% - 12px);
+        }
+
+        .flexbox .about p:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/header.jpg" alt="TripleMint">
+    </header>
+    <img src="img/0.jpg" alt="Hero Image">
+    <section class="flexbox">
+        <img src="img/1.jpg" alt="image">
+        <img src="img/2.jpg" alt="image">
+        <img src="img/3.jpg" alt="image">
+    </section>
+    <section>
+        <h1 class="title">61 Eastern Parkway 1G</h1>
+        <h5 class="subtitle">$500,000 • 1 BED • COOP • 1 BATH • $1,051 MAINTENANCE</h5>
+    </section>
+    <section class="flexbox">
+        <div class="contact-info">
+            <div class="contact-info__name">Jennifer Lee, MBA</div>
+            <div class="contact-info__title">VP OF SALES</div>
+            <div class="contact-info__phone"><b>M</b>: 510-543-7709 </div>
+            <div class="contact-info__phone"><b>O</b>: (866) 432-5956</div>
+            <div class="contact-info__email"><b>E</b>: Jennifer@triplemint.com</div>
+            <br/>
+            <div class="contact-info__name">Allie Deitch</div>
+            <div class="contact-info__title">LICENESED REAL ESTATE SALES PERSON </div>
+            <div class="contact-info__phone"><b>M</b>: 516-236-2140 </div>
+            <div class="contact-info__phone"><b>O</b>: (866) 432-5956</div>
+            <div class="contact-info__email"><b>E</b>: allie@triplemint.com</div>
+        </div>
+        <div class="about">
+            <p>Location and Beauty! Move right in to this triple mint true 1 Bedroom steps away from the Brooklyn Botanic Garden, Brooklyn Museum and Prospect Park. And all for under $500,000! No detail was spared in the renovation of this pristine unit with brand new matching Samsung stainless steel appliances, granite countertops in the kitchen, new tiled bathroom. The unit is set towards the back of the building so the unit is pin drop quiet.</p>
+            <p>Eastern Parkway is a full service coop in the heart of Prospect Heights, minutes from the 2,3 express trains and across the street from the beautiful Brooklyn Botanic Gardens and Brooklyn Museum. A quick 5 minute walk will bring you to Grand Army Plaza, home to a weekly farmer’s market and food truck expo, and Prospect Park. The building offers full time doorman, live-in super, bike storage and laundry in basement.</p>
+            <p style="font-weight: bold;">Please contact me for a private showing. First open house March 6th. This will not last!</p>
+        </div>
+    </section>
+</body>
+
+</html>
