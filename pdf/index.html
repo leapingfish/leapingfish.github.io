@@ -37,7 +37,6 @@
         .subtitle {
             background-color: #cecece;
             font-size: 0.8rem;
-            letter-spacing: 1px;
             margin: 0;
             padding: 5px;
             text-align: center;
@@ -58,8 +57,6 @@
             margin-top: 0;
             padding-top: 12px;
             width: 66%;
-            -webkit-column-count: 2;
-            column-count: 2;
         }
 
         .about p:first-child {
@@ -75,21 +72,36 @@
             border-collapse: collapse;
             border-spacing: 0;
         }
+
         table, th, td {
             border: none;
             margin: 0;
             padding: 0;
         }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            padding: 6px 8px;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <img src="img/header.jpg" alt="TripleMint">
-    </header>
-    <img src="img/0.jpg" alt="Hero Image">
     <table>
         <tbody>
+            <tr>
+                <td colspan="3">
+                    <img src="img/header.jpg" alt="TripleMint">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <img src="img/0.jpg" alt="Hero Image">
+                </td>
+            </tr>
             <tr>
                 <td><img src="img/1.jpg" alt="image"></td>
                 <td><img src="img/2.jpg" alt="image"></td>
@@ -97,10 +109,16 @@
             </tr>
         </tbody>
     </table>
-    <section>
-        <h1 class="title">61 Eastern Parkway 1G</h1>
-        <h5 class="subtitle">$500,000 • 1 BED • COOP • 1 BATH • $1,051 MAINTENANCE</h5>
-    </section>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h1 class="title">61 Eastern Parkway 1G</h1>
+                    <h5 class="subtitle">$500,000 • 1 BED • COOP • 1 BATH • $1,051 MAINTENANCE</h5>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table>
         <tbody>
             <tr>
