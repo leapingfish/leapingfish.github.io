@@ -48,28 +48,14 @@
             font-weight: bold;
         }
 
-        .flexbox {
-            display: flex;
-            justify-content: space-between;
-            margin: 12px 0;
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
         }
-
-        .flexbox > img {
-            width: calc(33% - 8px);
-        }
-
-        .flexbox .contact-info {
-            width: calc(33% - 12px);
-        }
-
-        .flexbox .about {
-            column-count: 2;
-            -webkit-column-count: 2;
-            width: calc(66% - 12px);
-        }
-
-        .flexbox .about p:first-child {
-            margin-top: 0;
+        table, th, td {
+            border: none;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -79,11 +65,15 @@
         <img src="img/header.jpg" alt="TripleMint">
     </header>
     <img src="img/0.jpg" alt="Hero Image">
-    <section class="flexbox">
-        <img src="img/1.jpg" alt="image">
-        <img src="img/2.jpg" alt="image">
-        <img src="img/3.jpg" alt="image">
-    </section>
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="img/1.jpg" alt="image"></td>
+                <td><img src="img/2.jpg" alt="image"></td>
+                <td><img src="img/3.jpg" alt="image"></td>
+            </tr>
+        </tbody>
+    </table>
     <section>
         <h1 class="title">61 Eastern Parkway 1G</h1>
         <h5 class="subtitle">$500,000 • 1 BED • COOP • 1 BATH • $1,051 MAINTENANCE</h5>
